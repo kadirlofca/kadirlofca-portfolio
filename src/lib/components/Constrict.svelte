@@ -1,10 +1,15 @@
 <script lang="ts">
-    let className: string = "";
-    export { className as class };
+  import { cn } from "$lib/scripts/cn";
+  import type { Snippet } from "svelte";
 
-    import { cn } from "$lib/scripts/cn";
+  interface Props {
+    class?: string;
+    children?: Snippet<[]>;
+  }
+
+  const { class: className, children }: Props = $props();
 </script>
 
-<div class={cn("max-w-screen-md", className)}>
-    <slot />
+<div class={cn("max-w-screen-lg", className)}>
+  {@render children?.()}
 </div>

@@ -1,9 +1,5 @@
 <script lang="ts">
-	import ProjectGallery from '$lib/components/ProjectGallery.svelte';
-	import Constrict from '$lib/components/Constrict.svelte';
+  import ProjectGallery from "$lib/components/ProjectGallery.svelte";
 </script>
 
-
-<Constrict class="flex flex-col mx-auto">
-	<ProjectGallery />
-</Constrict>
+<ProjectGallery />

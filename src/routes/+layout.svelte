@@ -1,12 +1,13 @@
 <script lang="ts">
   import "../app.css";
   import Profile from "$lib/components/Profile.svelte";
+  import Constrict from "$lib/components/Constrict.svelte";
   let { children } = $props();
 </script>
 
-<div class="flex flex-col-reverse md:flex-row h-svh  bg-dist-0 text-dist-0-foreground font-dist">
-  <div class="flex-1">
+<div class="h-svh bg-dist-0 text-dist-0-foreground font-dist">
+  <Constrict class="flex flex-col md:flex-row mx-auto">
+    <Profile />
     {@render children()}
-  </div>
-  <Profile />
+  </Constrict>
 </div>
