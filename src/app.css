@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+	/* COLOR */
+	--color-dist-0: hsl(240, 100%, 2%);
+	--color-dist-1: hsl(240, 20%, 80%);
+	--color-dist-2: hsl(0, 0%, 100%);
+
+	--color-dist-0-foreground: var(--color-dist-1);
+	--color-dist-1-foreground: var(--color-dist-0);
+	--color-dist-2-foreground: var(--color-dist-0);
+
+	/* FONT */
+	--font-dist: Sen, Raleway, Encode Sans, system-ui;
+
+	/* SPACING */
+	--padding-dist-0: 1.5rem;
+	--padding-dist-1: 0.7rem;
+}
