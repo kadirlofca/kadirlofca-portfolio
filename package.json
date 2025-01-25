@@ -23,6 +23,7 @@
 	},
 	"dependencies": {
 		"@tailwindcss/vite": "^4.0.0",
+		"mdsvex": "^0.12.3",
 		"tailwind": "^4.0.0",
 		"tailwind-merge": "^2.6.0"
 	}

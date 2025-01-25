@@ -4,17 +4,10 @@
   /* COLOR */
   --color-primary: hsl(222, 22%, 7%);
   --color-secondary: hsl(222, 11%, 77%);
-  --color-tertiary: hsl(222, 99%, 55%);
 
   --color-primary-foreground: var(--color-secondary);
   --color-secondary-foreground: var(--color-primary);
-  --color-tertiary-foreground: hsl(0, 0%, 100%);
 
   /* FONT */
   --font-dist: Sen, Raleway, Encode Sans, system-ui;
-
-  /* SPACING */
-  --padding-dist-0: 1.5rem;
-  --padding-dist-1: 0.7rem;
-  --padding-dist-2: 0.5rem;
 }

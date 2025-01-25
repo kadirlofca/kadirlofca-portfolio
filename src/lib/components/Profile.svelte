@@ -25,9 +25,12 @@
   <!-- SOCIALS -->
   <div>
     <div class="flex flex-wrap gap-2 w-full">
-      <p class="w-full px-2 py-1 border border-primary-foreground text-center text-sm text-primary-foreground hover:bg-secondary hover:text-secondary-foreground">
+      <a
+        href="mailto:kadirlofca@outlook.com"
+        class="w-full px-2 py-1 border border-primary-foreground text-center text-sm text-primary-foreground hover:bg-secondary hover:text-secondary-foreground"
+      >
         kadirlofca@outlook.com
-      </p>
+      </a>
       {#each Socials.socials as social}
         <Link href={social.href} class="flex-1 border border-primary-foreground text-center text-sm text-primary-foreground hover:bg-secondary hover:text-secondary-foreground">
           {social.title}
@@ -52,6 +55,6 @@
     <div class="flex-1 border border-secondary">
       <PercentBar {percentage} class="h-8 border-4 border-primary bg-secondary" />
     </div>
-    <span class="absolute flex w-full h-full top-0 items-center pl-dist-1 overflow-x-clip mix-blend-difference">{title}</span>
+    <span class="absolute flex w-full h-full top-0 items-center pl-2 overflow-x-clip mix-blend-difference">{title}</span>
   </div>
 {/snippet}
