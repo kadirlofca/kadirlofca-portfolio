@@ -7,36 +7,50 @@
   import getSkillDistribution from "$lib/scripts/getSkillDistribution";
 </script>
 
-<div class="flex flex-col max-w-64 w-max p-dist-0 gap-8">
+<div class="flex flex-col max-w-64 w-max p-4 gap-4">
   <!-- NAME -->
-  <div class="p-dist-1 bg-dist-0-foreground">
-    <h1 class="text-3xl text-center font-semibold text-dist-2-foreground">{Personal.fullName}</h1>
+  <div>
+    <p class="mb-2 text-xs text-secondary/50">ME</p>
+
+    <div class="h-16 border border-secondary">
+      <div class="h-full text-center px-3 py-2 border-4 border-primary bg-secondary">
+        <h1 class="text-3xl font-semibold text-secondary-foreground">{Personal.fullName}</h1>
+      </div>
+    </div>
+
+    <!-- PICTURE -->
+    <img src={Headshot} alt="Kadir Lofca." class="mt-4 w-max aspect-square border border-secondary" />
   </div>
 
   <!-- SOCIALS -->
-  <div class="flex gap-2">
-    {#each Socials.socials as social}
-      <div class="flex-1 text-center bg-dist-0-foreground">
-        <Link href={social.href} class="text-sm text-dist-2-foreground">{social.title}</Link>
-      </div>
-    {/each}
+  <div>
+    <div class="flex flex-wrap gap-2 w-full">
+      <p class="w-full px-2 py-1 border border-primary-foreground text-center text-sm text-primary-foreground hover:bg-secondary hover:text-secondary-foreground">
+        kadirlofca@outlook.com
+      </p>
+      {#each Socials.socials as social}
+        <Link href={social.href} class="flex-1 border border-primary-foreground text-center text-sm text-primary-foreground hover:bg-secondary hover:text-secondary-foreground">
+          {social.title}
+        </Link>
+      {/each}
+    </div>
   </div>
 
-  <!-- PICTURE -->
-  <img src={Headshot} alt="Kadir Lofca." class="w-max aspect-square border border-dist-0-foreground saturate-[30%]" />
-
   <!-- SKILLS -->
-  <div class="flex flex-col gap-4">
-    {#each getSkillDistribution() as skill}
-      {@render skillBar(skill, 60)}
-    {/each}
+  <div class="mt-2">
+    <p class="mb-2 text-xs text-secondary/50">SKILL DISTRIBUTION</p>
+    <div class="flex flex-col gap-2">
+      {#each getSkillDistribution() as skill}
+        {@render skillBar(skill, 60)}
+      {/each}
+    </div>
   </div>
 </div>
 
 {#snippet skillBar(title: string, percentage: number)}
   <div class="relative flex flex-row">
-    <div class="flex-1 border border-dist-0-foreground">
-      <PercentBar {percentage} class="h-8 ml-auto bg-dist-0-foreground" />
+    <div class="flex-1 border border-secondary">
+      <PercentBar {percentage} class="h-8 border-4 border-primary bg-secondary" />
     </div>
     <span class="absolute flex w-full h-full top-0 items-center pl-dist-1 overflow-x-clip mix-blend-difference">{title}</span>
   </div>

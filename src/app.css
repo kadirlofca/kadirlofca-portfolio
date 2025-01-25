@@ -2,13 +2,13 @@
 
 @theme {
   /* COLOR */
-  --color-dist-0: hsl(20, 50%, 6%);
-  --color-dist-1: hsl(20, 10%, 75%);
-  --color-dist-2: hsl(0, 0%, 100%);
+  --color-primary: hsl(222, 22%, 7%);
+  --color-secondary: hsl(222, 11%, 77%);
+  --color-tertiary: hsl(222, 99%, 55%);
 
-  --color-dist-0-foreground: var(--color-dist-1);
-  --color-dist-1-foreground: var(--color-dist-0);
-  --color-dist-2-foreground: var(--color-dist-0);
+  --color-primary-foreground: var(--color-secondary);
+  --color-secondary-foreground: var(--color-primary);
+  --color-tertiary-foreground: hsl(0, 0%, 100%);
 
   /* FONT */
   --font-dist: Sen, Raleway, Encode Sans, system-ui;
