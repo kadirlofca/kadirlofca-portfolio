@@ -5,7 +5,7 @@
   let { children } = $props();
 </script>
 
-<div class="max-h-screen text-primary-foreground font-dist bg-primary">
+<div class="text-primary-foreground font-dist bg-primary">
   <Constrict class="flex flex-col md:flex-row mx-auto">
     <Profile />
     {@render children()}
