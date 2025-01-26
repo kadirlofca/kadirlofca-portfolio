@@ -9,19 +9,17 @@
     const handleWheel = (e: WheelEvent) => {
       if (scrollableDiv) {
         scrollableDiv.scrollTop = scrollableDiv.scrollTop + e.deltaY * 0.2;
-        e.preventDefault();
       }
     };
 
-    window.addEventListener("wheel", handleWheel);
+    window.addEventListener("wheel", handleWheel, { passive: true });
   });
 </script>
 
-<div class="w-full h-svh">
+<div>
   <p class="mb-2 text-xs text-secondary/50">PROJECTS</p>
   <ProjectFilter />
-  <div bind:this={scrollableDiv} class="flex flex-col gap-4 w-full h-svh mt-4 border-t border-secondary overflow-y-scroll">
-    <ProjectPreview title="Fox Flip" shortDescription="A short description of the project." />
+  <div bind:this={scrollableDiv} class="flex flex-col gap-4 w-full overflow-y-scroll mt-4 border-t border-secondary">
     <ProjectPreview title="Fox Flip" shortDescription="A short description of the project." />
     <ProjectPreview title="Fox Flip" shortDescription="A short description of the project." />
     <ProjectPreview title="Fox Flip" shortDescription="A short description of the project." />

@@ -7,6 +7,7 @@
   import getSkillDistribution from "$lib/scripts/getSkillDistribution";
   import { fly } from "svelte/transition";
   import { onMount } from "svelte";
+  import Credits from "./Credits.svelte";
 
   let readyForLoadAnimation = $state(false);
 
@@ -59,13 +60,15 @@
         {/each}
       </div>
     </div>
+
+    <Credits />
   </div>
 {/if}
 
 {#snippet skillBar(title: string, percentage: number)}
   <div class="group relative flex flex-row">
     <div class="flex-1 border border-secondary group-hover:bg-secondary">
-      <PercentBar {percentage} class="h-8 border-4 border-primary bg-secondary group-hover:bg-primary group-hover:border-secondary group-hover:border" />
+      <PercentBar {percentage} class="h-8 border-4 border-primary bg-secondary group-hover:border-0" />
     </div>
     <span class="absolute flex w-full h-full top-0 items-center pl-2 overflow-x-clip text-sm mix-blend-difference">{title}</span>
   </div>
