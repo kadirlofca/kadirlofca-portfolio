@@ -8,7 +8,7 @@
   onMount(() => {
     const handleWheel = (e: WheelEvent) => {
       if (scrollableDiv) {
-        scrollableDiv.scrollTop = scrollableDiv.scrollTop + e.deltaY;
+        scrollableDiv.scrollTop = scrollableDiv.scrollTop + e.deltaY * 0.2;
         e.preventDefault();
       }
     };
@@ -20,7 +20,7 @@
 <div class="w-full h-svh">
   <p class="mb-2 text-xs text-secondary/50">PROJECTS</p>
   <ProjectFilter />
-  <div bind:this={scrollableDiv} class="flex flex-col gap-4 w-full h-svh mt-4 overflow-y-scroll">
+  <div bind:this={scrollableDiv} class="flex flex-col gap-4 w-full h-svh mt-4 border-t border-secondary overflow-y-scroll">
     <ProjectPreview title="Fox Flip" shortDescription="A short description of the project." />
     <ProjectPreview title="Fox Flip" shortDescription="A short description of the project." />
     <ProjectPreview title="Fox Flip" shortDescription="A short description of the project." />
