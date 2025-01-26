@@ -3,7 +3,7 @@
   export let shortDescription: string;
   export let tags: string[] = ["Unity", "C#"];
 
-  import Tag from "./Tag.svelte";
+  import Tag from "./Navigation/Tag.svelte";
 </script>
 
 <div class="flex flex-row min-h-56">

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Link from "./Link.svelte";
+  import Link from "../Navigation/Link.svelte";
 </script>
 
 <div class="group mt-auto text-[0.65rem]">

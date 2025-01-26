@@ -1,13 +1,13 @@
 <script lang="ts">
-  import Link from "./Link.svelte";
+  import Link from "./Navigation/Link.svelte";
   import Socials from "$lib/data/socials.json";
   import Personal from "$lib/data/personal.json";
   import Headshot from "$lib/images/headshot.png";
-  import PercentBar from "./PercentBar.svelte";
+  import PercentBar from "./Information/PercentBar.svelte";
   import getSkillDistribution from "$lib/scripts/getSkillDistribution";
   import { fly } from "svelte/transition";
   import { onMount } from "svelte";
-  import Credits from "./Credits.svelte";
+  import Credits from "./Information/Credits.svelte";
 
   let readyForLoadAnimation = $state(false);
 
