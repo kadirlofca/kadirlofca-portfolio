@@ -2,6 +2,6 @@
   import ProjectGallery from "$lib/components/ProjectGallery.svelte";
 </script>
 
-<div class="w-full p-4 pl-0">
+<div class="w-full h-screen p-4 pl-0">
   <ProjectGallery />
 </div>
