@@ -26,5 +26,11 @@
   <ProjectFilter />
   <div bind:this={scrollableDiv} class="flex flex-col gap-4 w-full h-[90%] overflow-y-scroll mt-4 border-t border-secondary">
     <ProjectPreview title="Fox Flip" shortDescription="A short description of the project." />
+    <ProjectPreview title="Fox Flip" shortDescription="A short description of the project." />
+    <ProjectPreview title="Fox Flip" shortDescription="A short description of the project." />
+    <ProjectPreview title="Fox Flip" shortDescription="A short description of the project." />
+    <ProjectPreview title="Fox Flip" shortDescription="A short description of the project." />
+    <ProjectPreview title="Fox Flip" shortDescription="A short description of the project." />
+    <ProjectPreview title="Fox Flip" shortDescription="A short description of the project." />
   </div>
 </div>
