@@ -7,6 +7,7 @@ export const reroute: Reroute = ({ url }) => {
 	}
 
     if(url.host == `game.${env.PUBLIC_DOMAIN}`){
+        console.log(url.host);
         return `/game${url.pathname}`;
     }
     

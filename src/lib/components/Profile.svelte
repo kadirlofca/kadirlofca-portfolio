@@ -20,7 +20,7 @@
   <div transition:fly class="flex flex-col max-w-64 w-max p-4 gap-4">
     <!-- NAME -->
     <div>
-      <p class="mb-2 text-xs text-secondary/50">ME</p>
+      <p class="mb-2 text-xs text-secondary/50">ABOUT ME</p>
 
       <div class="flex h-16 bg-secondary">
         <h1 class="m-auto text-3xl font-semibold text-secondary-foreground">{Personal.fullName}</h1>
