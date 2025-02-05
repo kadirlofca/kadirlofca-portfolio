@@ -3,16 +3,12 @@
   import ProjectFilter from "./ProjectFilter.svelte";
   import { onMount } from "svelte";
 
-  import getProjects from "$lib/scripts/getProjects";
-
-  getProjects().then((e) => console.log(e));
-
   let scrollableDiv: HTMLDivElement;
 
   function makeProjectGalleryScrollableFromAnywhere() {
     const handleWheel = (e: WheelEvent) => {
       if (scrollableDiv) {
-        scrollableDiv.scrollTop += e.deltaY * 0.2;
+        scrollableDiv.scrollTop += e.deltaY * 0.75;
         e.preventDefault();
       }
     };
@@ -28,7 +24,7 @@
 <div class="h-full">
   <p class="mb-2 text-xs text-secondary/50">PROJECTS</p>
   <ProjectFilter />
-  <div bind:this={scrollableDiv} class="flex flex-col gap-4 w-full h-[90%] overflow-y-scroll mt-4 border-t border-secondary">
+  <div bind:this={scrollableDiv} class="flex flex-col gap-4 w-full h-[92%] overflow-y-scroll mt-4 border-t border-secondary">
     <ProjectPreview title="Fox Flip" shortDescription="A really cool and fun game that you should totally play :) Totally not biased" />
     <ProjectPreview title="Bird Fishing" shortDescription="A short description of the project." />
     <ProjectPreview title="You Are Not My Cat" shortDescription="A really cool and fun game that you should totally play :) Totally not biased" />

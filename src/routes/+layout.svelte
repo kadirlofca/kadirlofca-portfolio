@@ -2,6 +2,7 @@
   import "../app.css";
   import Profile from "$lib/components/Profile.svelte";
   import Constrict from "$lib/components/Layout/Constrict.svelte";
+
   let { children } = $props();
 </script>
 

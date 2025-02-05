@@ -22,6 +22,7 @@
 	},
 	"dependencies": {
 		"@tailwindcss/vite": "^4.0.0",
+		"@types/node": "^22.13.0",
 		"gray-matter": "^4.0.3",
 		"tailwind": "^4.0.0",
 		"tailwind-merge": "^2.6.0"
