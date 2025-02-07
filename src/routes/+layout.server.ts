@@ -1,12 +1,9 @@
+import getAllPublishedProjects from '$lib/scripts/getAllPublishedProjects';
+import { page } from '$app/state';
 import type { LayoutServerLoad } from './$types';
-import getAllProjects from '$lib/scripts/getAllProjects';
+import type { Project } from '$lib/types/project.type';
 
 export const load: LayoutServerLoad = async () => {
-	getAllProjects();
-	return {
-		
-	};
+	const publishedProjects: Project[] = await getAllPublishedProjects();
+	return { publishedProjects };
 };
-
-
-// ssh commit test

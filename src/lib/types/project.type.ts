@@ -3,6 +3,5 @@ export type Project = {
     description: string;
     tags: string[];
     projectDate: string;
-    published: boolean;
     markdownContent: string; 
 }
