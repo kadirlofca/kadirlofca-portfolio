@@ -1,8 +1,5 @@
 <script lang="ts">
   import ProjectGallery from "$lib/components/ProjectGallery.svelte";
-  import getProjects from "$lib/scripts/getProjects";
-  
-  // getProjects("");
 </script>
 
 <div class="w-full h-svh p-4 pl-0 pb-2">
