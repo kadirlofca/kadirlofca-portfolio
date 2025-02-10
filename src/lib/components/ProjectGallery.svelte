@@ -33,7 +33,7 @@
   <ProjectFilter />
   <div bind:this={scrollableDiv} class="flex flex-col gap-4 w-full h-[92%] overflow-y-scroll mt-4 border-t border-secondary">
     {#each publishedProjects as project}
-      <ProjectPreview title={project.title} shortDescription={project.description} />
+      <ProjectPreview title={project.title} description={project.description} projectDate={project.projectDate} tags={project.tags} />
     {/each}
   </div>
 </div>

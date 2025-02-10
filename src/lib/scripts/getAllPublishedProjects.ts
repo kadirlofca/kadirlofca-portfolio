@@ -18,12 +18,13 @@ export default function getAllPublishedProjects(): Project[] {
             projects.push({
                 title: matterOutput.data.title,
                 description: matterOutput.data.description,
+                subdomains: matterOutput.data.subdomains,
                 tags: matterOutput.data.tags,
                 projectDate: matterOutput.data.projectDate,
                 markdownContent: matterOutput.content 
             });   
         }
     })
-
+    
     return projects;
 }
