@@ -3,8 +3,10 @@
   import type { PageProps } from './$types';
 
   let { data }: PageProps = $props();
+
+  console.log(data.projects);
 </script>
 
 <div class="w-full h-svh p-4 pl-0 pb-2">
-  <ProjectGallery publishedProjects={data.publishedProjects} />
+  <ProjectGallery publishedProjects={data.projects} />
 </div>
