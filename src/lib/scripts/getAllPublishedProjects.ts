@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import matter from "gray-matter"
 import type { Project } from '$lib/types/project.type';
 
-const projectsFolderDirectory: fs.PathLike = "./src/projects/";
+const projectsFolderDirectory: fs.PathLike = "./src/projects/markdowns/";
 
 export default function getAllPublishedProjects(): Project[] {
     let projects: Project[] = [];
@@ -21,6 +21,7 @@ export default function getAllPublishedProjects(): Project[] {
                 subdomains: matterOutput.data.subdomains,
                 tags: matterOutput.data.tags,
                 projectDate: matterOutput.data.projectDate,
+                thumbnailFileName: matterOutput.data.thumbnailFileName,
                 markdownContent: matterOutput.content 
             });   
         }

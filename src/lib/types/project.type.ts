@@ -4,5 +4,6 @@ export type Project = {
     subdomains: string[];
     tags: string[];
     projectDate: string;
+    thumbnailFileName: string;
     markdownContent: string; 
 }
