@@ -1,7 +1,7 @@
 <script lang="ts">
   import Link from "./Navigation/Link.svelte";
-  import Socials from "$lib/data/socials.json";
-  import Personal from "$lib/data/personal.json";
+  import Socials from "$lib/data/kadirlofca-socials.json";
+  import Professional from "$lib/data/kadirlofca-professional.json";
   import Headshot from "$lib/images/headshot.png";
   import PercentBar from "./Information/PercentBar.svelte";
   import getSkillDistribution from "$lib/scripts/getSkillDistribution";
@@ -15,7 +15,7 @@
     <p class="mb-2 text-xs text-secondary/50">ABOUT ME</p>
 
     <div class="flex h-16 bg-secondary">
-      <h1 class="m-auto text-3xl font-semibold text-secondary-foreground">{Personal.fullName}</h1>
+      <h1 class="m-auto text-3xl font-semibold text-secondary-foreground">{Professional.fullName}</h1>
     </div>
 
     <!-- PICTURE -->
@@ -41,6 +41,11 @@
         </Link>
       {/each}
     </div>
+  </div>
+
+  <!-- DESCRIPTION -->
+  <div>
+    
   </div>
 
   <!-- SKILLS -->

@@ -1,0 +1,19 @@
+{
+    "fullName": "Kadir Lofca",
+    "currentTitle": "Software Engineer",
+    "currentLocation": "North Carolina",
+    "professions": {
+        "softwareEngineering": {
+            "title": "Software Engineer",
+            "description": "I have worked on fullstack web apps at Genesys, Santai.GG, and freelance."
+        },
+        "gameDevelopment": {
+            "title": "Game Developer",
+            "description": ""
+        },
+        "cybersecurity": {
+            "title": "Cybersecurity Analyst",
+            "description": ""
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import getAllPublishedProjects from '$lib/scripts/getAllPublishedProjects';
 import type { LayoutServerLoad } from './$types';
+import Professional from "$lib/data/kadirlofca-professional.json";
 
 export const load: LayoutServerLoad = (event) => {
 	const subdomainProjects = getAllPublishedProjects().filter(p => {

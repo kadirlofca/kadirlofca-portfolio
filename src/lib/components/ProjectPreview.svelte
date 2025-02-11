@@ -16,7 +16,7 @@
   <div class="relative w-full border border-secondary">
     <p class="absolute right-0 p-2.5 text-xl font-semibold text-accent">{projectDate}</p>
     {#await import(/* @vite-ignore */ `../../projects/thumbnails/${thumbnailFileName}`) then { default: src }}
-      <img alt={title + " thumbnail."} src={src} class="">
+      <img alt={title + " thumbnail."} src={src}>
     {/await}
   </div>
   <div class="flex flex-col justify-between max-w-[50%] p-2 pr-4 bg-secondary text-secondary-foreground border border-secondary">
