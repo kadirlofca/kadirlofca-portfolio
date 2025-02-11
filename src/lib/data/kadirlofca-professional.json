@@ -8,12 +8,12 @@
             "description": "I have worked on fullstack web apps at Genesys, Santai.GG, and freelance."
         },
         "gameDevelopment": {
-            "title": "Game Developer",
-            "description": ""
+            "title": "Gameplay Engineer",
+            "description": "I specialize in gameplay engineering. I led many projects where I designed and implemented game features."
         },
         "cybersecurity": {
             "title": "Cybersecurity Analyst",
-            "description": ""
+            "description": "I'm CompTIA Security+ certified. I maintain a home server where I apply my knowledge and skills."
         }
     }
 }
