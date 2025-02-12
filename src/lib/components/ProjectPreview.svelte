@@ -13,7 +13,7 @@
   import Tag from "./Navigation/Tag.svelte";
 </script>
 
-<button onclick={onClick} class="p-1 border border-secondary hover:bg-secondary">
+<button onclick={onClick} class="p-1 border border-secondary hover:bg-secondary hover:cursor-pointer">
   <div class="flex flex-row min-h-56">
     <div class="relative w-full">
       <p class="absolute right-0 p-2.5 drop-shadow-xl text-xl font-semibold text-accent">{projectDate}</p>
