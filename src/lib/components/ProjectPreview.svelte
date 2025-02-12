@@ -13,12 +13,12 @@
   import Tag from "./Navigation/Tag.svelte";
 </script>
 
-<button onclick={onClick} class="p-1 border border-secondary hover:bg-secondary hover:cursor-pointer">
+<button onclick={onClick} class="p-1 border border-secondary hover:bg-secondary hover:cursor-pointer text-left">
   <div class="flex flex-row min-h-56">
     <div class="relative w-full">
       <p class="absolute right-0 p-2.5 drop-shadow-xl text-xl font-semibold text-accent">{projectDate}</p>
       {#await import(/* @vite-ignore */ `../../projects/thumbnails/${thumbnailFileName}`) then { default: src }}
-        <img alt={title + " thumbnail."} src={src}>
+        <img alt={title + " thumbnail."} src={src} class="object-cover">
       {/await}
     </div>
     <div class="flex flex-col justify-between max-w-[50%] p-2 pr-4 bg-secondary text-secondary-foreground border border-secondary">
