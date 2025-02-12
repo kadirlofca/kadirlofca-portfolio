@@ -10,10 +10,9 @@
     const {
         class: className,
         title,
-        ...rest
-    }: HTMLButtonAttributes & Props = $props();
+    }: Props = $props();
 </script>
   
-<button {...rest} class={cn("inline w-fit border", className)}>
+<div class={cn("inline w-fit border", className)}>
     {title}
-</button>
+</div>

@@ -10,8 +10,8 @@
   const { careerData } = $props();
 </script>
 
-<div class="flex flex-col max-w-64 w-max p-4 gap-4">
-  <!-- NAME -->
+<div class="flex flex-col max-w-72 w-max p-4 gap-4">
+  <!-- NAME & PICTURE -->
   <div>
     <p class="mb-2 text-xs text-secondary/50">ABOUT ME</p>
 
@@ -20,9 +20,14 @@
     </div>
 
     <!-- PICTURE -->
-    <img src={Headshot} alt="Kadir Lofca." class="mt-4 w-max aspect-square border border-secondary" />
+    <img src={Headshot} alt="Kadir Lofca." class="mt-4 w-max aspect-square border border-secondary" />  
   </div>
 
+  <!-- DESCRIPTION -->
+  <div class="p-2 bg-secondary text-sm text-pretty font-semibold text-secondary-foreground">
+    <p>{careerData.description}</p>
+  </div>
+  
   <!-- SOCIALS -->
   <div>
     <div class="flex flex-wrap gap-2 w-full">
@@ -42,11 +47,6 @@
         </Link>
       {/each}
     </div>
-  </div>
-
-  <!-- DESCRIPTION -->
-  <div class="px-2 py-1 bg-secondary text-secondary-foreground text-sm">
-    {careerData.description}
   </div>
 
   <!-- SKILLS -->

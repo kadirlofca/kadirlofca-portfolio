@@ -1,6 +1,7 @@
 <script lang="ts">
   import ProjectPreview from "./ProjectPreview.svelte";
   import ProjectFilter from "./ProjectFilter.svelte";
+  import ProjectRender from "./ProjectRender.svelte";
   import { onMount } from "svelte";
   import type { Project } from "$lib/types/project.type";
 
@@ -9,8 +10,16 @@
   }
 
   const { publishedProjects }: Props = $props();
+  let selectedProject: Project | undefined = $state();
+  let scrollableDiv: HTMLDivElement | undefined = $state();
 
-  let scrollableDiv: HTMLDivElement;
+  function viewProject(project: Project) {
+    selectedProject = project;
+  }
+
+  function viewGallery(){
+    selectedProject = undefined;
+  }
 
   function makeProjectGalleryScrollableFromAnywhere() {
     const handleWheel = (e: WheelEvent) => {
@@ -30,10 +39,14 @@
 
 <div class="h-full">
   <p class="mb-2 text-xs text-secondary/50">PROJECTS</p>
+  {#if selectedProject == undefined}
   <ProjectFilter />
   <div bind:this={scrollableDiv} class="flex flex-col gap-4 w-full h-[92%] overflow-y-scroll mt-4 border-t border-secondary">
     {#each publishedProjects as project}
-      <ProjectPreview title={project.title} description={project.description} projectDate={project.projectDate} thumbnailFileName={project.thumbnailFileName} tags={project.tags} />
+      <ProjectPreview onClick={viewProject(project)} title={project.title} description={project.description} projectDate={project.projectDate} thumbnailFileName={project.thumbnailFileName} tags={project.tags} />
     {/each}
   </div>
+  {:else}
+    <ProjectRender project={selectedProject} />
+  {/if}
 </div>
