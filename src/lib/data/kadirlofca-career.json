@@ -1,8 +1,11 @@
 {
     "fullName": "Kadir Lofca",
-    "currentTitle": "Software Engineer",
     "currentLocation": "North Carolina",
     "professions": {
+        "general": {
+            "title": "Software Engineer",
+            "description": "I love creating useful tools, beautiful interfaces, and fun experiences."
+        },
         "softwareEngineering": {
             "title": "Software Engineer",
             "description": "I have worked on fullstack web apps at Genesys, Santai.GG, and freelance."
