@@ -24,7 +24,7 @@
       <img src={Headshot} alt="Kadir Lofca." class="w-max aspect-square border border-secondary" />
 
       <!-- DESCRIPTION -->
-      <div class="p-2 bg-secondary text-sm text-pretty font-semibold text-secondary-foreground">
+      <div class="p-2 bg-secondary text-sm text-pretty font-medium text-secondary-foreground">
         <p>{careerData.description}</p>
       </div>
       

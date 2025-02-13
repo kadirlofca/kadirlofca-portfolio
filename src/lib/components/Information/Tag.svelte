@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { cn } from "$lib/scripts/cn";
-    import type { HTMLButtonAttributes } from "svelte/elements";
 
     interface Props {
         class: string;
@@ -13,6 +12,6 @@
     }: Props = $props();
 </script>
   
-<div class={cn("inline w-fit border", className)}>
+<div class={cn("inline w-fit", className)}>
     {title}
 </div>

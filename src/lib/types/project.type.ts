@@ -5,5 +5,5 @@ export type Project = {
     tags: string[];
     projectDate: string;
     thumbnailFileName: string;
-    markdownContent: string; 
+    renderedMarkdownContent: string; 
 }

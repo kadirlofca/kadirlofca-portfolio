@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import matter from "gray-matter"
 import type { Project } from '$lib/types/project.type';
+import Showdown from 'showdown';
 
 const projectsFolderDirectory: fs.PathLike = "./src/projects/markdowns/";
 
@@ -13,6 +14,9 @@ export default function getAllPublishedProjects(): Project[] {
         const fileContent = fs.readFileSync(projectsFolderDirectory + fileName, "utf8");
         
         const matterOutput: matter.GrayMatterFile<string> = matter(fileContent);
+        
+        const showdownConverter = new Showdown.Converter;
+        matterOutput.content = showdownConverter.makeHtml(matterOutput.content);
 
         if(matterOutput.data.published){
             projects.push({
@@ -22,7 +26,7 @@ export default function getAllPublishedProjects(): Project[] {
                 tags: matterOutput.data.tags,
                 projectDate: matterOutput.data.projectDate,
                 thumbnailFileName: matterOutput.data.thumbnailFileName,
-                markdownContent: matterOutput.content 
+                renderedMarkdownContent: matterOutput.content 
             });   
         }
     })

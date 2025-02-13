@@ -13,10 +13,6 @@
   let selectedProject: Project | undefined = $state();
   let scrollableDiv: HTMLDivElement | undefined = $state();
 
-  function viewGallery(){
-    selectedProject = undefined;
-  }
-
   const handleWheel = (e: WheelEvent) => {
       if (scrollableDiv) {
         scrollableDiv.scrollTop += e.deltaY * 0.75;
@@ -31,7 +27,7 @@
   <p class="mb-2 text-xs text-secondary/50">PROJECTS</p>
   {#if selectedProject == undefined}
     <ProjectFilter />
-    <div bind:this={scrollableDiv} class="flex flex-col gap-4 w-full h-[92%] overflow-y-scroll mt-4 border-t border-secondary">
+    <div bind:this={scrollableDiv} class="flex flex-col gap-4 w-full h-[88%] overflow-y-scroll mt-4">
       {#each publishedProjects as project}
         <ProjectPreview onClick={() => selectedProject = project} title={project.title} description={project.description} projectDate={project.projectDate} thumbnailFileName={project.thumbnailFileName} tags={project.tags} />
       {/each}
