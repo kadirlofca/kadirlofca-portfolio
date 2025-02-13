@@ -1,9 +1,10 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   /* COLOR */
   --color-primary: hsl(222, 22%, 11%);
-  --color-secondary: hsl(22, 11%, 77%);
+  --color-secondary: hsl(22, 11%, 82%);
   --color-tertiary: hsl(22, 100%, 50%);
 
   --color-primary-foreground: var(--color-secondary);
