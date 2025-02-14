@@ -21,7 +21,7 @@
         <img alt={title + " thumbnail."} src={src} class="h-full aspect-auto object-cover">
       {/await}
     </div>
-    <div class="flex flex-col justify-between max-w-[50%] p-2 pr-4 bg-secondary text-secondary-foreground border border-secondary">
+    <div class="flex flex-col justify-between max-w-[50%] w-full p-2 pr-4 bg-secondary text-secondary-foreground border border-secondary">
       <div class="mb-24">
         <h1 class="text-xl font-semibold text-secondary-foreground">{title}</h1>
         <p>{description}</p>
