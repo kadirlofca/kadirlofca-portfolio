@@ -1,13 +1,17 @@
 <script lang="ts">
   import Link from "./Navigation/Link.svelte";
   import Socials from "$lib/data/kadirlofca-socials.json";
-  import Career from "$lib/data/kadirlofca-career.json";
   import Headshot from "$lib/images/headshot.png";
   import PercentBar from "./Information/PercentBar.svelte";
-  import getSkillDistribution from "$lib/scripts/getSkillDistribution";
   import Credits from "./Information/Credits.svelte";
+  import type { Skill } from "$lib/types/skill.type";
 
-  const { careerData } = $props();
+  interface Props {
+    career: any,
+    skills: Skill[]
+  }
+
+  const { career, skills }: Props = $props();
 </script>
 
 <div class="flex flex-row md:flex-col p-4 gap-4">
@@ -17,7 +21,7 @@
 
     <div class="flex flex-col gap-4">
       <div class="flex h-16 bg-secondary">
-        <h1 class="m-auto text-3xl font-semibold text-secondary-foreground">{Career.fullName}</h1>
+        <h1 class="m-auto text-3xl font-semibold text-secondary-foreground">{career.fullName}</h1>
       </div>
 
       <!-- PICTURE -->
@@ -25,7 +29,7 @@
 
       <!-- DESCRIPTION -->
       <div class="p-2 bg-secondary text-sm text-pretty font-medium text-secondary-foreground">
-        <p>{careerData.description}</p>
+        <p>{career.description}</p>
       </div>
       
       <!-- SOCIALS -->
@@ -55,8 +59,8 @@
   <div class="md:mt-2 w-full">
     <p class="mb-2 text-xs text-secondary/50">SKILL DISTRIBUTION</p>
     <div class="flex flex-col gap-2">
-      {#each getSkillDistribution() as skill}
-        {@render skillBar(skill, 60)}
+      {#each skills as skill}
+        {@render skillBar(skill.title, skill.percentage)}
       {/each}
     </div>
 

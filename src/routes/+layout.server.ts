@@ -1,7 +1,10 @@
 import { env } from '$env/dynamic/public';
 import getAllPublishedProjects from '$lib/scripts/getAllPublishedProjects';
+import getSkillDistribution from '$lib/scripts/getSkillDistribution';
 import type { LayoutServerLoad } from './$types';
-import Career from "$lib/data/kadirlofca-career.json";
+import Careers from "$lib/data/kadirlofca-careers.json";
+import type { Career } from '$lib/types/career.type';
+import type { Skill } from '$lib/types/skill.type';
 
 export const load: LayoutServerLoad = (event) => {
 	const subdomain = event.url.hostname.split('.')[0];
@@ -11,24 +14,37 @@ export const load: LayoutServerLoad = (event) => {
 		return subdomain == "www" || subdomain == env.PUBLIC_DOMAIN || lowerCaseSubdomains.includes(subdomain);
 	});
 
-	let subdomainCareerData = Career.professions.general;
+	const skills: Skill[] = getSkillDistribution(subdomainProjects);
+
+	let subdomainCareer: Career = {
+		fullName: Careers.fullName,
+		location: Careers.location,
+		title: "",
+		description: ""
+	};
+	
 	switch(subdomain){
 		case "game":
-			subdomainCareerData = Career.professions.gameDevelopment
+			subdomainCareer.title = Careers.professions.gameDevelopment.title
+			subdomainCareer.description = Careers.professions.gameDevelopment.description
 			break;
 		case "swe":
-			subdomainCareerData = Career.professions.softwareEngineering
+			subdomainCareer.title = Careers.professions.softwareEngineering.title
+			subdomainCareer.description = Careers.professions.softwareEngineering.description
 			break;
 		case "cyber":
-			subdomainCareerData = Career.professions.cybersecurity
+			subdomainCareer.title = Careers.professions.cybersecurity.title
+			subdomainCareer.description = Careers.professions.cybersecurity.description
 			break;
 		default:
-			subdomainCareerData = Career.professions.general
+			subdomainCareer.title = Careers.professions.general.title
+			subdomainCareer.description = Careers.professions.general.description
 			break;
 	}
 
 	return {
 		projects: subdomainProjects,
-		careerData: subdomainCareerData
+		career: subdomainCareer,
+		skills,
 	}
 };

@@ -9,7 +9,7 @@
 
 <div class="text-primary-foreground font-dist bg-primary">
   <Constrict class="flex flex-col md:flex-row mx-auto">
-    <Profile careerData={data.careerData} />
+    <Profile skills={data.skills} career={data.career} />
     {@render children()}
   </Constrict>
 </div>
