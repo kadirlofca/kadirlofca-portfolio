@@ -2,7 +2,6 @@
   import ProjectPreview from "./ProjectPreview.svelte";
   import ProjectFilter from "./ProjectFilter.svelte";
   import ProjectRender from "./ProjectRender.svelte";
-  import { onMount } from "svelte";
   import type { Project } from "$lib/types/project.type";
 
   interface Props {

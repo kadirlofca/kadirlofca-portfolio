@@ -57,7 +57,7 @@
 
   <!-- SKILL DISTRIBUTION -->
   <div class="md:mt-2 w-full">
-    <p class="mb-2 text-xs text-secondary/50">SKILL DISTRIBUTION</p>
+    <p class="mb-2 text-xs text-secondary/50">TOP SKILLS</p>
     <div class="flex flex-col gap-2">
       {#each skills as skill}
         {@render skillBar(skill.title, skill.percentage)}

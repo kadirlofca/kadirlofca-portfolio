@@ -37,7 +37,5 @@ export default function getSkillDistribution(projects: Project[]): Skill[] {
         s.percentage *= skillMultiplier;
     })
 
-    console.log(skills);
-
     return skills;
 }
