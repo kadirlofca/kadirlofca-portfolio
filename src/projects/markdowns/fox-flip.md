@@ -8,11 +8,3 @@ thumbnailFileName: fox-flip.jpg
 published: true
 ---
 
-## About
-Description
-
-```ts
-function(a){
-    console.log(a);
-}
-```
