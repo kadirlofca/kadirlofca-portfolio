@@ -14,7 +14,7 @@
 
   const handleWheel = (e: WheelEvent) => {
       if (scrollableDiv) {
-        scrollableDiv.scrollTop += e.deltaY * 0.75;
+        scrollableDiv.scrollTop += e.deltaY;
         e.preventDefault();
       }
   };
@@ -25,8 +25,8 @@
 <div class="h-full">
   <p class="mb-2 text-xs text-secondary/50">PROJECTS</p>
   {#if selectedProject == undefined}
-    <ProjectFilter />
-    <div bind:this={scrollableDiv} class="flex flex-col gap-4 w-full h-[88%] overflow-y-scroll mt-4">
+    <!-- <ProjectFilter /> -->
+    <div bind:this={scrollableDiv} class="flex flex-col gap-4 w-full h-[95%] overflow-y-scroll mt-2"> <!-- make mt-4 instead if using ProjectFilter -->
       {#each publishedProjects as project}
         <ProjectPreview onClick={() => selectedProject = project} title={project.title} description={project.description} projectDate={project.projectDate} thumbnailFileName={project.thumbnailFileName} tags={project.tags} />
       {/each}

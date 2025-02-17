@@ -57,24 +57,27 @@
 
   <!-- SKILL DISTRIBUTION -->
   <div class="md:mt-2 w-full">
-    <p class="mb-2 text-xs text-secondary/50">TOP SKILLS</p>
-    <div class="flex flex-col gap-2">
+    <p class="mb-2 text-xs text-secondary/50">SKILLS</p>
+    <!-- <div class="flex flex-col gap-2">
       {#each skills as skill}
         {@render skillBar(skill.title, skill.percentage)}
+      {/each} -->
+    <div class="flex flex-wrap max-w-72 gap-2">
+      {#each skills as skill}
+        <p style={`--percentage: ${skill.percentage}%`} class="flex-[var(--percentage)] p-1 text-nowrap text-sm text-center font-medium text-secondary-foreground bg-secondary">{skill.title}</p>
       {/each}
     </div>
-
     <div class="mt-2 text-center">
       <Credits />
     </div>
   </div>
 </div>
 
-{#snippet skillBar(title: string, percentage: number)}
+<!-- {#snippet skillBar(title: string, percentage: number)}
   <div class="group relative flex flex-row">
     <div class="flex-1 border border-secondary group-hover:bg-secondary">
       <PercentBar {percentage} class="h-8 border-4 border-primary bg-secondary group-hover:border-0" />
     </div>
     <span class="absolute flex w-full h-full top-0 items-center pl-2 overflow-x-clip text-sm mix-blend-difference">{title}</span>
   </div>
-{/snippet}
+{/snippet} -->

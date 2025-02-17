@@ -31,11 +31,11 @@ export default function getSkillDistribution(projects: Project[]): Skill[] {
 
     skills.sort((a, b): number => { return a.percentage > b.percentage ? -1 : (a.percentage == b.percentage ? 0 : 1) });
 
-    const skillMultiplier: number = 100 / skills[0].percentage;
+    // const skillMultiplier: number = 100 / skills[0].percentage;
 
-    skills.forEach(s => {
-        s.percentage *= skillMultiplier;
-    })
+    // skills.forEach(s => {
+    //     s.percentage *= skillMultiplier;
+    // })
 
     return skills;
 }
