@@ -5,14 +5,5 @@ subdomains: ["game"]
 tags: ["Unity", "C#"]
 projectDate: "Jan 2025"
 thumbnailFileName: slice-and-dice.jpg
-published: true
+published: false
 ---
-
-## About
-Description
-
-```ts
-function(a){
-    console.log(a);
-}
-```

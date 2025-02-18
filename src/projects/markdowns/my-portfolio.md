@@ -5,14 +5,7 @@ subdomains: [swe, frontend]
 tags: [Svelte, TypeScript]
 projectDate: "Jan 2025"
 thumbnailFileName: my-portfolio.jpg
-published: true
+published: false
 ---
 
-## About
-Description
-
-```ts
-function(a){
-    console.log(a);
-}
-```
+## 

@@ -16,7 +16,7 @@
 <button onclick={onClick} class="p-1 border border-secondary hover:bg-secondary hover:cursor-pointer text-left">
   <div class="flex flex-row min-h-56">
     <div class="relative w-full">
-      <p class="absolute right-0 p-2.5 drop-shadow-xl text-xl font-semibold text-accent">{projectDate}</p>
+      <!-- <p class="absolute right-0 bottom-0 p-2.5 mix-blend-difference text-xl font-semibold text-white">{projectDate}</p> -->
       {#await import(/* @vite-ignore */ `../../projects/thumbnails/${thumbnailFileName}`) then { default: src }}
         <img alt={title + " thumbnail."} src={src} class="h-full aspect-auto object-cover">
       {/await}
