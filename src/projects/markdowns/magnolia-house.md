@@ -8,7 +8,7 @@ thumbnailFileName: magnolia-house.jpg
 published: true
 ---
 
-## Preface
+### Preface
 I traded my Nintendo Switch for a Meta Quest and experienced VR for the first time, I was blown away. I emailed my professor on January 11 2021 to work with him on the Magnolia House - and got the job.
 
 ## User Locomotion

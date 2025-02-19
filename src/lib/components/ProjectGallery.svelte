@@ -13,7 +13,9 @@
   let scrollableDiv: HTMLDivElement | undefined = $state();
 
   const handleWheel = (e: WheelEvent) => {
-      if (scrollableDiv) {
+      let isSmallScreen: boolean = window.innerWidth <= 1152;
+
+      if (!isSmallScreen && scrollableDiv) {
         scrollableDiv.scrollTop += e.deltaY;
         e.preventDefault();
       }
@@ -26,7 +28,7 @@
   <p class="mb-2 text-xs text-secondary/50">PROJECTS</p>
   {#if selectedProject == undefined}
     <!-- <ProjectFilter /> -->
-    <div bind:this={scrollableDiv} class="flex flex-col gap-4 w-full h-[95%] overflow-y-scroll mt-2"> <!-- make mt-4 instead if using ProjectFilter -->
+    <div bind:this={scrollableDiv} class="flex flex-col gap-4 w-full h-[95%] lg:overflow-y-scroll mt-2"> <!-- make mt-4 instead if using ProjectFilter -->
       {#each publishedProjects as project}
         <ProjectPreview onClick={() => selectedProject = project} title={project.title} description={project.description} projectDate={project.projectDate} thumbnailFileName={project.thumbnailFileName} tags={project.tags} />
       {/each}

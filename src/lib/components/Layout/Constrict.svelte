@@ -10,6 +10,6 @@
   const { class: className, children }: Props = $props();
 </script>
 
-<div class={cn("max-w-screen-lg", className)}>
+<div class={cn("max-w-6xl", className)}>
   {@render children?.()}
 </div>
