@@ -34,6 +34,8 @@
       {/each}
     </div>
   {:else}
-    <ProjectRender onBackButtonClick={() => selectedProject = undefined} project={selectedProject} />
+    <div bind:this={scrollableDiv} class="h-[95%] overflow-y-scroll">
+      <ProjectRender onBackButtonClick={() => selectedProject = undefined} project={selectedProject} />
+    </div>
   {/if}
 </div>

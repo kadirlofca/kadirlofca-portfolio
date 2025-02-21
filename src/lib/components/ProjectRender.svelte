@@ -11,7 +11,7 @@
 
 <div class="flex flex-row w-full h-20 gap-4">
     <div class="flex-1 flex w-full h-20 p-2 bg-secondary text-secondary-foreground">
-        <div class="prose prose-lg flex flex-col w-full">
+        <div class="prose flex w-full">
             <h1>{project.title}</h1>
         </div>
     </div>
@@ -21,6 +21,6 @@
     </button>
 </div>
 
-<div class="prose prose-lg max-w-full w-full p-2 bg-secondary">
+<div class="prose prose-h2:mb-0 max-w-full w-full p-2 bg-secondary">
     {@html project.renderedMarkdownContent}
 </div>
