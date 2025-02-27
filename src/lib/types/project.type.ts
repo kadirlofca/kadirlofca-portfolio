@@ -3,7 +3,7 @@ export type Project = {
     description: string;
     subdomains: string[];
     tags: string[];
-    projectDate: string;
+    date: string;
     slug: string;
     renderedMarkdownContent: string; 
 }

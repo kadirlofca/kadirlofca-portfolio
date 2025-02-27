@@ -3,7 +3,7 @@ title: "Word Generator"
 description: ""
 subdomains: ["swe"]
 tags: [Python]
-projectDate: ""
+date: ""
 slug: word-generator
 published: true
 ---
