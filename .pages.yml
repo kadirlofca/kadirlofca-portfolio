@@ -29,7 +29,7 @@ content:
             label: SWE
           - value: [game]
             label: GAME
-          - value: [swe game]
+          - value: [swe, game]
             label: ALL
             
       - name: date
