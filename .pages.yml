@@ -12,28 +12,22 @@ content:
         type: string
 
       - name: slug
-        label: Slug
         type: string
 
       - name: description
-        label: Description
         type: string
 
       - name: subdomains
-        label: Subdomains
         type: select
         options:
-        values: [ swe, game ]
+          values: [ swe, game ]
         
       - name: date
-        label: Date
         type: date
       
       - name: published
-        label: Published
         type: boolean
         default: true
 
       - name: body
-        label: Body
         type: rich-text
