@@ -4,11 +4,11 @@
     projectDate: string,
     description: string,
     tags: string[],
-    thumbnailFileName: string
+    slug: string
     onClick: any;
   }
 
-  const { title, projectDate, description, tags, thumbnailFileName, onClick = null }: Props = $props();
+  const { title, projectDate, description, tags, slug, onClick = null }: Props = $props();
 
   import Tag from "./Information/Tag.svelte";
 </script>
@@ -17,7 +17,7 @@
   <div class="flex flex-row min-h-56">
     <div class="relative w-full">
       <!-- <p class="absolute right-0 bottom-0 p-2.5 mix-blend-difference text-xl font-semibold text-white">{projectDate}</p> -->
-      {#await import(/* @vite-ignore */ `../../projects/thumbnails/${thumbnailFileName}`) then { default: src }}
+      {#await import(/* @vite-ignore */ `../../projects/thumbnails/${slug}.jpg`) then { default: src }}
         <img alt={title + " thumbnail."} src={src} class="h-full aspect-auto object-cover">
       {/await}
     </div>

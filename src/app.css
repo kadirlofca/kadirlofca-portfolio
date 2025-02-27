@@ -3,8 +3,8 @@
 
 @theme {
   /* COLOR */
-  --color-primary: hsl(222, 22%, 11%);
-  --color-secondary: hsl(22, 11%, 82%);
+  --color-primary: hsl(222, 14%, 12%);
+  --color-secondary: hsl(22, 11%, 95%);
   --color-tertiary: hsl(22, 100%, 50%);
 
   --color-primary-foreground: var(--color-secondary);

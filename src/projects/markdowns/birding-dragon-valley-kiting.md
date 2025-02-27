@@ -8,7 +8,6 @@ thumbnailFileName: birding-dragon-valley-kiting.jpg
 published: false
 ---
 
-## Preface
 I decided to join a 2-day game jam. The theme was Fishing & No Water. I met new people and formed a team of 12 people all around the world! We worked together on a Discord call to make it all happen.
 
 ## Flying The Kite

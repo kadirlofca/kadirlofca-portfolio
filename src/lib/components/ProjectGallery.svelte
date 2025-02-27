@@ -13,16 +13,16 @@
   let scrollableDiv: HTMLDivElement | undefined = $state();
 
   const handleWheel = (e: WheelEvent) => {
-      let isSmallScreen: boolean = window.innerWidth <= 1152;
+      // let isSmallScreen: boolean = window.innerWidth <= 1152;
 
-      if (!isSmallScreen && scrollableDiv) {
-        scrollableDiv.scrollTop += e.deltaY;
-        e.preventDefault();
-      }
+      // if (!isSmallScreen && scrollableDiv) {
+      //   scrollableDiv.scrollTop += e.deltaY;
+      //   e.preventDefault();
+      // }
   };
 </script>
 
-<svelte:window on:wheel={handleWheel} />
+<!-- <svelte:window on:wheel={handleWheel} /> -->
 
 <div class="h-full">
   <p class="mb-2 text-xs text-secondary/50">PROJECTS</p>
@@ -30,7 +30,7 @@
     <!-- <ProjectFilter /> -->
     <div bind:this={scrollableDiv} class="flex flex-col gap-4 w-full h-[95%] lg:overflow-y-scroll mt-2"> <!-- make mt-4 instead if using ProjectFilter -->
       {#each publishedProjects as project}
-        <ProjectPreview onClick={() => selectedProject = project} title={project.title} description={project.description} projectDate={project.projectDate} thumbnailFileName={project.thumbnailFileName} tags={project.tags} />
+        <ProjectPreview onClick={() => selectedProject = project} title={project.title} description={project.description} projectDate={project.projectDate} slug={project.slug} tags={project.tags} />
       {/each}
     </div>
   {:else}

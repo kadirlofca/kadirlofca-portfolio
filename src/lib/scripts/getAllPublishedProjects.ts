@@ -25,7 +25,7 @@ export default function getAllPublishedProjects(): Project[] {
                 subdomains: matterOutput.data.subdomains,
                 tags: matterOutput.data.tags,
                 projectDate: matterOutput.data.projectDate,
-                thumbnailFileName: matterOutput.data.thumbnailFileName,
+                slug: matterOutput.data.slug,
                 renderedMarkdownContent: matterOutput.content 
             });   
         }

@@ -4,6 +4,6 @@ description: ""
 subdomains: ["swe"]
 tags: [Python]
 projectDate: ""
-thumbnailFileName: word-generator.jpg
+slug: word-generator
 published: true
 ---

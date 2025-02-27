@@ -4,7 +4,7 @@ description: "Enjoy walking through the Historic Magnolia House in VR!"
 subdomains: [game]
 tags: [Unity, C#, VR, Spatial Audio]
 projectDate: "Jan 2025"
-thumbnailFileName: magnolia-house.jpg
+slug: magnolia-house
 published: true
 ---
 

@@ -4,6 +4,6 @@ description: ""
 subdomains: [swe]
 tags: ["Unity", "C#"]
 projectDate: "Jan 2025"
-thumbnailFileName: vr-two-factor-authentication.jpg
+slug: vr-two-factor-authentication
 published: true
 ---
