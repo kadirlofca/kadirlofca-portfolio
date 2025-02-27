@@ -1,9 +1,10 @@
 ---
-title: "VR Two-Factor Authentication"
-description: ""
-subdomains: [swe]
-tags: ["Unity", "C#"]
-date: "Jan 2025"
+published: false
+title: VR Two-Factor Authentication
 slug: vr-two-factor-authentication
-published: true
+description: asd
+subdomains: swe
+tags: Unity, C#
+date: 2025-02-27
 ---
+asd
