@@ -1,0 +1,40 @@
+media: media
+content:
+  - name: projects
+    label: Projects
+    type: collection
+    path: 'src/projects/markdowns'
+    view:
+      fields: [ title, published ]
+    fields:
+
+      - name: title
+        label: Title
+        type: string
+
+      - name: slug
+        label: Slug
+        type: string
+
+      - name: description
+        label: Description
+        type: string
+
+      - name: subdomains
+        label: Subdomains
+        type: select
+        options:
+        values: [ swe, game ]
+        
+      - name: date
+        label: Date
+        type: date
+      
+      - name: published
+        label: Published
+        type: boolean
+        default: true
+
+      - name: body
+        label: Body
+        type: rich-text
