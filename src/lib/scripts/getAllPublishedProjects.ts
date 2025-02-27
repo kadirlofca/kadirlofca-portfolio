@@ -22,8 +22,8 @@ export default function getAllPublishedProjects(): Project[] {
             projects.push({
                 title: matterOutput.data.title,
                 description: matterOutput.data.description,
-                subdomains: matterOutput.data.subdomains,
-                tags: matterOutput.data.tags,
+                subdomains: matterOutput.data.subdomains as string,
+                tags: matterOutput.data.tags as string,
                 date: matterOutput.data.date,
                 slug: matterOutput.data.slug,
                 renderedMarkdownContent: matterOutput.content 

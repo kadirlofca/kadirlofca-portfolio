@@ -10,7 +10,7 @@ export const load: LayoutServerLoad = (event) => {
 	const subdomain = event.url.hostname.split('.')[0];
 
 	const subdomainProjects = getAllPublishedProjects().filter(p => {
-		const lowerCaseSubdomains = p.subdomains.map((subdomain) => subdomain.toLowerCase());
+		const lowerCaseSubdomains = p.subdomains.split(", ").map((subdomain) => subdomain.toLowerCase());
 		return subdomain == "www" || subdomain == env.PUBLIC_DOMAIN || lowerCaseSubdomains.includes(subdomain);
 	});
 

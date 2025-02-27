@@ -7,7 +7,11 @@ export default function getSkillDistribution(projects: Project[]): Skill[] {
 
     // Count skills.
     projects.forEach((project) => {
-        project.tags.forEach((tag) => {
+        if(!project.tags){
+            return;
+        }
+
+        project.tags.split(",").forEach((tag) => {
             const skillIndex = skillCounts.findIndex((s) => { return s.title == tag });
 
             if(skillIndex != -1){
