@@ -17,7 +17,7 @@
   <div class="flex flex-row min-h-56">
     <div class="relative w-full">
       <!-- <p class="absolute right-0 bottom-0 p-2.5 mix-blend-difference text-xl font-semibold text-white">{projectDate}</p> -->
-      {#await import(/* @vite-ignore */ `../../projects/thumbnails/${slug}.jpg`) then { default: src }}
+      {#await import(/* @vite-ignore */ `../../projects/images/thumbnails/${slug}.jpg`) then { default: src }}
         <img alt={title + " thumbnail."} src={src} class="h-full aspect-auto object-cover">
       {/await}
     </div>
