@@ -8,6 +8,10 @@ content:
       fields: [ title, published ]
     fields:
 
+      - name: published
+        type: boolean
+        default: false
+
       - name: title
         type: string
 
@@ -20,14 +24,16 @@ content:
       - name: subdomains
         type: select
         options:
-          values: [ swe, game ]
-        
+          values:     
+          - value: swe
+            label: SWE
+          - value: game
+            label: GAME
+          - value: swe game
+            label: ALL
+            
       - name: date
         type: date
-      
-      - name: published
-        type: boolean
-        default: true
 
       - name: body
         type: rich-text
