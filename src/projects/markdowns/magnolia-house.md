@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 title: Magnolia House
 slug: magnolia-house
 description: Enjoy walking through the Historic Magnolia House in VR!
