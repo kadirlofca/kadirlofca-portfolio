@@ -25,11 +25,11 @@ content:
         type: select
         options:
           values:     
-          - value: [swe]
+          - value: swe
             label: SWE
-          - value: [game]
+          - value: game
             label: GAME
-          - value: [swe, game]
+          - value: swe game
             label: ALL
             
       - name: date
