@@ -1,9 +1,9 @@
 ---
-title: "Word Generator"
-description: ""
-subdomains: ["swe"]
-tags: [Python]
-date: ""
-slug: word-generator
 published: true
+title: Word Generator
+slug: word-generator
+description: asd
+subdomains: swe
+tags: Python
+date: 2025-02-27
 ---
