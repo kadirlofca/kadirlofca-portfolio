@@ -1,8 +1,10 @@
 ---
 published: false
 title: "Birding: Dragon Valley Kiting"
+slug: birding-dragon-valley-kiting
 description: Fish birds out of the sky using a kite!
-subdomains: swe game
+subdomains: game
+date: 2025-01-15
 ---
 I decided to join a 2-day game jam. The theme was Fishing & No Water. I met new people and formed a team of 12 people all around the world! We worked together on a Discord call to make it all happen.
 
