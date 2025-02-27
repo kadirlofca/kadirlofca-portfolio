@@ -22,16 +22,11 @@ content:
         type: string
 
       - name: subdomains
-        type: select
-        options:
-          values:     
-          - value: swe
-            label: SWE
-          - value: game
-            label: GAME
-          - value: swe game
-            label: ALL
-            
+        type: string
+
+      - name: tags
+        type: string
+        
       - name: date
         type: date
 
