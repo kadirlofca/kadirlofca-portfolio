@@ -1,9 +1,10 @@
 ---
-title: "Santai.GG"
-description: "Spectre Divide player stats and leaderboard website."
-subdomains: ["swe"]
-tags: ["TypeScript", "React", "NextJS", "Redis", "Railway", "Postgres"]
-date: "Sep 2024"
+published: false
+title: Santai.GG
 slug: santai-gg
-published: true
+description: Spectre Divide player stats and leaderboard website.
+subdomains: swe
+tags: TypeScript, React, NextJS, Redis, Railway, Postgres
+date: 2025-02-27
 ---
+asd
