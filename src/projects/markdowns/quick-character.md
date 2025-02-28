@@ -28,14 +28,13 @@ All code is sorted in a dependencies-first manner. For example:
         // SetMedium() is written after OnMediumChangeInternal() because it depends on it.
         private void OnMediumChangeInternal(MoveMedium oldMedium)
         {
-            ...
+            // Some code here.
         }
 
         private void SetMedium(MoveMedium newMedium)
         {
-            ...
             OnMediumChangeInternal(oldMedium);
-            ...
+            // Rest of code.
         }
 ```
 
