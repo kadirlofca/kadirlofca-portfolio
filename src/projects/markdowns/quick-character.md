@@ -39,3 +39,34 @@ All code is sorted in a dependencies-first manner. For example:
 ```
 
 This helps with my goal of having an excellent developer experience by logically sorting functions.
+
+## State Machine
+
+I designed a system where the character can only be in one movement state at any given time. The developer simply defines what functions need to be called for each movement state.
+
+```
+        // Snippet from AdvancedCharacter.cs
+        // Functions are called inside the switch statement, applying appropriate forces onto the character body.
+        // FindNextMedium() is called to calculate next frame's medium.
+        protected override MoveMedium PhysicsUpdate()
+        {
+            switch (medium)
+            {
+                case MoveMedium.ground:
+                    ApplyFloorMovement(gait);
+                    break;
+
+                case MoveMedium.air:
+                    ApplyGravity(descendingGravity, ascendingGravity);
+                    ApplyAirControlMovement(airControl);
+                    ApplyAirMovement(rb.velocity.XZ().magnitude.Map(airAccelBoostThreshold, 0, 0, airAcceleration));
+                    ApplyDrag(drag);
+                    break;
+
+                default:
+                    return MoveMedium.air;
+            }
+
+            return FindNextMedium();
+        }
+```
