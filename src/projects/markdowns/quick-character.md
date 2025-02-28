@@ -38,4 +38,4 @@ All code is sorted in a dependencies-first manner. For example:
         }
 ```
 
-This helps with my goal of having an excellent developer experience by logically sorting functions in the file.
+This helps with my goal of having an excellent developer experience by logically sorting functions.
