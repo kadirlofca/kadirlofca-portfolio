@@ -11,7 +11,7 @@ With this project I learned about designing a system, writing readable code, and
 
 > I love playing movement games such as Titanfall, Apex, Mirror's Edge, and tinkering with game engines trying to replicate their movements. Quick Character is a framework I made where developers define their movement logic without having to deal with how that logic interacts with other character states.
 
-# Project Structure
+## Project Structure
 
 Quick Character consists of 3 folders:
 
