@@ -25,22 +25,18 @@ Quick Character consists of 3 folders:
 All code is sorted in a dependencies-first manner. For example:
 
 ```
+        // SetMedium() is written after OnMediumChangeInternal() because it depends on it.
         private void OnMediumChangeInternal(MoveMedium oldMedium)
         {
             ...
         }
 
-        private void ForceMediumForDuration(int nFramesDuration, MoveMedium forcedMedium)
-        {
-            forcedMediumFrames = Mathf.Max(nFramesDuration, 0);
-            SetMedium(forcedMedium);
-        }
-
         private void SetMedium(MoveMedium newMedium)
         {
-            MoveMedium oldMedium = medium;
-            medium = newMedium;
+            ...
             OnMediumChangeInternal(oldMedium);
-            OnMediumChange(oldMedium);
+            ...
         }
 ```
+
+This helps with my goal of having an excellent developer experience by logically sorting functions in the file.
