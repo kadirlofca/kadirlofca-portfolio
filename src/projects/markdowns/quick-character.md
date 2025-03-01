@@ -77,4 +77,6 @@ I designed a system where the character can only be in one movement state at any
 
 ## Result
 
+I really enjoyed this project - movement in video games is something I enjoy a lot, and building a framework that handles these mechanics so gracefully gave me lots of joy!
+
 I have successfully made a framework that allows easy creation of unlimited movement states, including common movement mechanics and physics calculations built in. Developers are able rely on Quick Character for the groundwork, and focus on developing what makes their game unique.
