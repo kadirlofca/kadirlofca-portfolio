@@ -42,7 +42,7 @@ This helps with my goal of having an excellent developer experience by logically
 
 ## State Machine
 
-I designed a system where the character can only be in one movement state at any given time. The developer simply defines what functions need to be called for each movement state.
+I designed a system where the character can only be in one movement state at any given time. The developer simply defines functions to be called for each movement state.
 
 ```
         // Snippet from AdvancedCharacter.cs
