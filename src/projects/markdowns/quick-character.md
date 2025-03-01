@@ -77,4 +77,4 @@ I designed a system where the character can only be in one movement state at any
 
 ## Result
 
-I have successfully made a framework that allows easy creation of unlimited movement states, including built-in common movement states and physics calculations. Developers are able rely on Quick Character for the groundwork, and focus on developing what makes their game unique.
+I have successfully made a framework that allows easy creation of unlimited movement states, including common movement mechanics and physics calculations built in. Developers are able rely on Quick Character for the groundwork, and focus on developing what makes their game unique.
