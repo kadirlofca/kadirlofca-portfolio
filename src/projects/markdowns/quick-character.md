@@ -11,6 +11,10 @@ With this project I learned about designing a system, writing readable code, and
 
 > I love playing movement games such as Titanfall, Apex, Mirror's Edge, and tinkering with game engines trying to replicate their movements. Quick Character is a framework I made where developers define their movement logic without having to deal with how that logic interacts with other character states.
 
+## Documentation
+
+I created a document that explains the structure, design, and usage of Quick Character. This [document](https://docs.google.com/document/d/1-FhSI0pdEeYZkR6kjopAi1zpy6sI15SUxLPDIBEJE74/edit?tab=t.0) is hosted in Google Docs, and linked in the [GitHub repo](https://github.com/kadirlofca/quick-character).
+
 ## Project Structure
 
 Quick Character consists of 3 folders:
