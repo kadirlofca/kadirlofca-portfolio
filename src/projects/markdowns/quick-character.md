@@ -13,7 +13,7 @@ With this project I learned about designing a system, writing readable code, and
 
 ## Documentation
 
-I created a document that explains the structure, design, and usage of Quick Character. This [document](https://docs.google.com/document/d/1-FhSI0pdEeYZkR6kjopAi1zpy6sI15SUxLPDIBEJE74/edit?tab=t.0) is hosted in Google Docs, and linked in the [GitHub repo](https://github.com/kadirlofca/quick-character).
+I created a document that explains the structure, design, and usage of Quick Character. This [document](https://docs.google.com/document/d/1-FhSI0pdEeYZkR6kjopAi1zpy6sI15SUxLPDIBEJE74/edit?tab=t.0) is hosted in Google Docs, and linked in the [GitHub repo](https://github.com/kadirlofca/quick-character). I wrote everything in an easy to digest way that explains the fundamentals of the framework. My idea was that developers from all skill levels can get into using this framework as fast and easy as possible.
 
 ## Project Structure
 
