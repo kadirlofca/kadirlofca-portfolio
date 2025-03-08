@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import svelte from "@astrojs/svelte";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
-import { SITE_URL } from "./src/data/site";
+import siteData from "./src/data/site.json";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,7 +12,7 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   integrations: [svelte(), mdx(), sitemap()],
-  site: SITE_URL,
+  site: siteData.siteUrl,
   redirects: {
     "/posts": "/", // redirect from /posts because that page doesn't exist.
   },
