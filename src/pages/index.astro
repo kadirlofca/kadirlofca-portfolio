@@ -1,0 +1,73 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Section from "../components/Section.astro";
+import Posts from "../components/reactive/Posts.svelte";
+import Tags from "../components/reactive/Tags.svelte";
+import CosmeticText from "../components/CosmeticText.astro";
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../data/site";
+import { USER_PROFESSIONAL_DESCRIPTION } from "../data/user-professional";
+import { USER_INTRODUCTION, USER_NAME } from "../data/user-personal";
+import USER_PICTURE from "../../public/user-picture.jpeg";
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("posts");
+
+const heroTags: Set<string> = new Set(
+  allPosts.flatMap((post) => post.data.tags),
+);
+
+const cosmeticTexts: { [section: string]: string } = {
+  header: "BACKSTAGE",
+  hero: "CLICK ON A TAG",
+  about: "ABOUT ME",
+};
+---
+
+<Layout
+  siteTitle={SITE_TITLE}
+  siteDescription={SITE_DESCRIPTION}
+  headerCosmeticText={cosmeticTexts.header}
+>
+  <!-- HERO -->
+  <Section
+    class="from-accent/10 relative flex min-h-72 bg-radial-[at_50%_10%] to-transparent pl-4"
+  >
+    <div class="m-auto max-w-md text-center">
+      <span class="text-xl">{USER_PROFESSIONAL_DESCRIPTION}</span>
+      <Tags client:load tags={heroTags} />
+    </div>
+    <CosmeticText text={cosmeticTexts.hero} vertical />
+  </Section>
+
+  <!-- POSTS -->
+  <Section class="">
+    <Posts client:load allPosts={allPosts} />
+  </Section>
+
+  <!-- ABOUT -->
+  <Section class="relative flex min-h-96">
+    <span class="absolute"
+      ><CosmeticText text={cosmeticTexts.about} vertical /></span
+    >
+
+    <div
+      class="mx-auto flex max-w-3xl flex-col gap-16 px-8 pt-32 pb-16 md:flex-row md:p-16"
+    >
+      <div
+        class="group/image rounded-interactive bg-accent mx-auto my-auto aspect-square h-48 w-48 md:mx-0"
+      >
+        <img
+          class="rounded-interactive h-48 w-48 scale-110 -rotate-z-12 overflow-clip object-cover duration-200 group-hover/image:scale-[101%] group-hover/image:-rotate-z-0"
+          src={USER_PICTURE.src}
+          alt={`${USER_NAME}'s profile picture.`}
+        />
+      </div>
+
+      <div class="my-auto text-pretty">
+        <h1 class="text-xl">Hi.</h1>
+        <p>{USER_INTRODUCTION}</p>
+      </div>
+    </div>
+  </Section>
+</Layout>

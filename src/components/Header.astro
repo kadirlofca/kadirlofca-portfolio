@@ -1,0 +1,61 @@
+---
+import Section from "./Section.astro";
+import Arrow from "../components/Arrow.astro";
+import Menu from "../components/reactive/Menu.svelte";
+
+import { USER_SOCIALS, USER_EMAIL } from "../data/user-contact";
+import { USER_NAME } from "../data/user-personal";
+import CosmeticText from "./CosmeticText.astro";
+
+interface Props {
+  cosmeticText?: string;
+}
+
+const { cosmeticText = "" } = Astro.props;
+---
+
+<Section class="flex max-h-72 min-h-64 justify-between">
+  <div class="mt-auto">
+    <CosmeticText text={cosmeticText} vertical />
+  </div>
+
+  <span class="mt-auto">
+    <CosmeticText
+      text={new Date()
+        .toLocaleDateString("en-us", { year: "numeric", month: "short" })
+        .toUpperCase()}
+    />
+  </span>
+</Section>
+
+<Section class="flex flex-row p-2">
+  <a class="hover:brightness-125" href="/"
+    ><h1 class="text-4xl sm:text-5xl">{USER_NAME}</h1></a
+  >
+
+  <Menu client:load />
+
+  <!-- USER CONTACT -->
+  <div class="ml-auto hidden flex-col gap-4 sm:gap-0 md:block md:flex">
+    <a
+      class="ml-auto duration-200 hover:brightness-125"
+      href={`mailto:${USER_EMAIL}`}>{USER_EMAIL}<Arrow rotate={-45} /></a
+    >
+    <div class="flex flex-row-reverse flex-wrap gap-4">
+      {
+        USER_SOCIALS.map((social) => (
+          <a class="duration-200 hover:brightness-125" href={social.href}>
+            {social.title}
+            <Arrow class="stroke-primary-foreground" rotate={-45} />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</Section>
+
+<script>
+  let dropDownActive: boolean = false;
+
+  function toggleDropDownMenu() {}
+</script>

@@ -1,0 +1,26 @@
+---
+import { cn } from "../styles/cn";
+
+interface Props {
+  class?: string;
+  rotate?: number;
+}
+
+const { rotate, class: className = "" } = Astro.props;
+---
+
+<svg
+  style=`--rotation: ${rotate}deg`
+  class={cn(
+    className,
+    "inline aspect-square w-3 h-auto fill-transparent rotate-[var(--rotation)]",
+  )}
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M3 12L21 12M21 12L12.5 3.5M21 12L12.5 20.5"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"></path>
+</svg>

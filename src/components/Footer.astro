@@ -1,0 +1,55 @@
+---
+import Section from "./Section.astro";
+import Arrow from "../components/Arrow.astro";
+
+import { USER_SOCIALS, USER_EMAIL } from "../data/user-contact";
+import { USER_NAME } from "../data/user-personal";
+---
+
+<Section class="flex flex-row p-2">
+  <a class="my-auto hover:brightness-125" href="/"><h1>{USER_NAME}</h1></a>
+
+  <!-- USER CONTACT -->
+  <div class="ml-auto hidden flex-col md:flex">
+    <div class="flex flex-row-reverse flex-wrap gap-4">
+      <a class="duration-200 hover:brightness-125" href={`mailto:${USER_EMAIL}`}
+        >{USER_EMAIL}<Arrow rotate={-45} /></a
+      >
+      {
+        USER_SOCIALS.map((social) => (
+          <a class="duration-200 hover:brightness-125" href={social.href}>
+            {social.title}
+            <Arrow class="stroke-primary-foreground" rotate={-45} />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+
+  <a
+    class="text-primary-foreground ml-auto px-2 hover:cursor-pointer hover:brightness-125 md:hidden"
+  >
+    {USER_EMAIL}
+    <Arrow class="stroke-primary-foreground" rotate={-45} />
+  </a>
+</Section>
+
+<!-- CREDITS -->
+<Section class="m-auto flex flex-row justify-center gap-8 py-16 text-center">
+  <a
+    class="duration-200 hover:brightness-125"
+    target="_blank"
+    rel="noopener noreferrer"
+    href="https://github.com/kadirlofca/backstage"
+    >Site template by Kadir Lofca <Arrow
+      class="stroke-primary-foreground"
+      rotate={-45}
+    /></a
+  >
+  <div
+    class="group rounded-interactive border-primary-foreground text-primary-foreground w-24 border p-1 text-xs font-black text-nowrap opacity-60"
+  >
+    <span class="group-hover:hidden">100% HANDMADE</span>
+    <span class="hidden group-hover:inline">0% AI</span>
+  </div>
+</Section>

@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+
+@import "tailwindcss";
+@import "tailwindcss/preflight.css" layer(base);
+
+@plugin "@tailwindcss/typography";
+
+@theme {
+  /* COLOR */
+  --theme-hue: 200;
+  --color-primary: hsl(var(--theme-hue), 20%, 6%);
+  --color-primary-foreground: hsl(var(--theme-hue), 100%, 92%);
+  --color-secondary: hsl(var(--theme-hue), 40%, 10%);
+  --color-accent: hsl(var(--theme-hue), 100%, 50%);
+  --color-edge: hsl(var(--theme-hue), 30%, 18%);
+
+  /* FONT */
+  --font-primary: Rajdhani, system-ui;
+
+  /* OTHER */
+  --radius-interactive: 0.4rem;
+  --duration-interactive: 200ms;
+}
+
+@layer base {
+  :root {
+    color: var(--color-primary-foreground);
+    font-family: var(--font-primary);
+  }
+}

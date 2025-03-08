@@ -1,0 +1,27 @@
+---
+import Head from "../components/Head.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  siteTitle: string;
+  siteDescription: string;
+  headerCosmeticText: string;
+}
+
+const { siteTitle, siteDescription, headerCosmeticText } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="bg-primary">
+  <head>
+    <Head pageTitle={siteTitle} pageDescription={siteDescription} />
+  </head>
+  <body>
+    <main class="min-h-svh">
+      <Header cosmeticText={headerCosmeticText} />
+      <slot />
+      <Footer />
+    </main>
+  </body>
+</html>
