@@ -1,0 +1,67 @@
+media:
+  input: src/media
+  output: /media
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: 'src/posts'
+    view:
+      fields: [ title, published, date ]
+    fields:
+      - name: published
+        label: Published
+        type: boolean
+        default: true
+      - name: date
+        label: Date
+        type: date
+      - name: title
+        label: Title
+        type: string
+      - name: body
+        label: Body
+        type: rich-text
+  - name: site
+    label: Site Settings
+    path: src/data/site.json
+    type: file
+    fields:
+      - name: siteTitle
+        label: Site Title
+        type: string
+      - name: siteDescription
+        label: Site Description
+        type: string
+      - name: siteUrl
+        label: Site URL
+        type: string
+  - name: contact
+    label: Contact Information
+    path: src/data/user-contact.json
+    type: file
+    fields:
+      - name: userEmail
+        label: Email
+        type: string
+  - name: personal
+    label: Personal Information
+    path: src/data/user-personal.json
+    type: file
+    fields:
+      - name: userName
+        label: Name Lastname
+        type: string
+      - name: userIntroduction
+        label: User Introduction
+        description: A short paragraph to show a glimpse of your personality outside of work. 
+        type: string
+  - name: professional
+    label: Professional Information
+    path: src/data/user-professional.json
+    type: file
+    fields:
+      - name: professionalDescription
+        label: Professional Description
+        description: A one-line descriptor of your career.
+        type: string
