@@ -1,3 +1,14 @@
 {
-  "userEmail": "kadirlofca@outlook.com "
+  "userEmail": "kadirlofca@outlook.com ",
+  "userSocials": [
+    {
+      "title": "GitHub"
+    },
+    {
+      "title": "LinkedIn"
+    },
+    {
+      "title": "Discord"
+    }
+  ]
 }
