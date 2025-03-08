@@ -2,22 +2,22 @@
 import Section from "./Section.astro";
 import Arrow from "../components/Arrow.astro";
 
-import { USER_SOCIALS, USER_EMAIL } from "../data/user-contact";
-import { USER_NAME } from "../data/user-personal";
+import userContactInformation from "../data/user-contact.json";
+import userPersonalInformation from "../data/user-personal.json";
 ---
 
 <Section class="flex flex-row p-2">
-  <a class="my-auto hover:brightness-125" href="/"><h1>{USER_NAME}</h1></a>
+  <a class="my-auto hover:brightness-125" href="/"><h1>{userPersonalInformation.userName}</h1></a>
 
   <!-- USER CONTACT -->
   <div class="ml-auto hidden flex-col md:flex">
     <div class="flex flex-row-reverse flex-wrap gap-4">
-      <a class="duration-200 hover:brightness-125" href={`mailto:${USER_EMAIL}`}
-        >{USER_EMAIL}<Arrow rotate={-45} /></a
+      <a class="duration-200 hover:brightness-125" href={`mailto:${userContactInformation.userEmail}`}
+        >{userContactInformation.userEmail}<Arrow rotate={-45} /></a
       >
       {
-        USER_SOCIALS.map((social) => (
-          <a class="duration-200 hover:brightness-125" href={social.href}>
+        userContactInformation.userSocials.map((social) => (
+          <a class="duration-200 hover:brightness-125" href={social.url}>
             {social.title}
             <Arrow class="stroke-primary-foreground" rotate={-45} />
           </a>
@@ -29,7 +29,7 @@ import { USER_NAME } from "../data/user-personal";
   <a
     class="text-primary-foreground ml-auto px-2 hover:cursor-pointer hover:brightness-125 md:hidden"
   >
-    {USER_EMAIL}
+    {userContactInformation.userEmail}
     <Arrow class="stroke-primary-foreground" rotate={-45} />
   </a>
 </Section>

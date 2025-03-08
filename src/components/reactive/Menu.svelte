@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { USER_SOCIALS, USER_EMAIL } from "../../data/user-contact";
+    import userContactInformation from "../../data/user-contact.json";
     import { slide, blur } from "svelte/transition";
 
     let droppedDown: boolean = $state(false);
@@ -21,9 +21,9 @@
         <div class="flex flex-col gap-8 my-auto ml-auto p-8 text-2xl text-right">
             <a
             class="duration-200 hover:brightness-125"
-            href={`mailto:${USER_EMAIL}`}>{USER_EMAIL}</a>
-            {#each USER_SOCIALS as social}
-                <a class="duration-200 hover:brightness-125" href={social.href}>
+            href={`mailto:${userContactInformation.userEmail}`}>{userContactInformation.userEmail}</a>
+            {#each userContactInformation.userSocials as social}
+                <a class="duration-200 hover:brightness-125" href={social.url}>
                     {social.title}
                 </a>
             {/each}
