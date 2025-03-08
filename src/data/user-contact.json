@@ -2,13 +2,16 @@
   "userEmail": "kadirlofca@outlook.com ",
   "userSocials": [
     {
-      "title": "GitHub"
+      "title": "GitHub",
+      "url": "asd"
     },
     {
-      "title": "LinkedIn"
+      "title": "LinkedIn",
+      "url": "asd"
     },
     {
-      "title": "Discord"
+      "title": "Discord",
+      "url": "asd"
     }
   ]
 }
