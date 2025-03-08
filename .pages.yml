@@ -50,7 +50,7 @@ content:
     type: file
     fields:
       - name: userName
-        label: Name Lastname
+        label: Full Name
         type: string
       - name: userIntroduction
         label: User Introduction
