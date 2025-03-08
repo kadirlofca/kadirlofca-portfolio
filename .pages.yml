@@ -44,6 +44,17 @@ content:
       - name: userEmail
         label: Email
         type: string
+      - name: userSocials
+        label: Socials
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: url
+            label: URL
+            type: string
   - name: personal
     label: Personal Information
     path: src/data/user-personal.json
