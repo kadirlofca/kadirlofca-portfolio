@@ -2,20 +2,20 @@
   "userEmail": "kadirlofca@outlook.com ",
   "userSocials": [
     {
-      "title": "GitHub",
-      "url": "https://github.com/kadirlofca"
-    },
-    {
       "title": "LinkedIn",
       "url": "https://www.linkedin.com/in/kadirlofca/"
+    },
+    {
+      "title": "YouTube",
+      "url": "https://www.youtube.com/@haftindie"
     },
     {
       "title": "Discord",
       "url": "https://discordapp.com/users/493054495291342849"
     },
     {
-      "title": "YouTube",
-      "url": "https://www.youtube.com/@haftindie"
+      "title": "GitHub",
+      "url": "https://github.com/kadirlofca"
     }
   ]
 }
