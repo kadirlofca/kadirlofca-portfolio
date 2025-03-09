@@ -62,7 +62,7 @@
 
 <Filters />
 
-<div class="group grid grid-cols-1 md:grid-cols-3 gap-4 p-4 rounded-interactive pointer-events-none hover:border-edge duration-200">					
+<div class="group grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 rounded-interactive pointer-events-none hover:border-edge duration-200">					
     {#each sortedPosts as post}
         {@render postCard(post)}
     {/each}

@@ -13,7 +13,7 @@ import userPersonalInformation from "../data/user-personal.json";
   <div class="ml-auto hidden flex-col md:flex">
     <div class="flex flex-row-reverse flex-wrap gap-4">
       <a class="duration-200 hover:brightness-125" href={`mailto:${userContactInformation.userEmail}`}
-        >{userContactInformation.userEmail}<Arrow rotate={-45} /></a
+        >{userContactInformation.userEmail}<Arrow class="stroke-primary-foreground" rotate={-45} /></a
       >
       {
         userContactInformation.userSocials.map((social) => (
@@ -41,11 +41,8 @@ import userPersonalInformation from "../data/user-personal.json";
     target="_blank"
     rel="noopener noreferrer"
     href="https://github.com/kadirlofca/backstage"
-    >Site template by Kadir Lofca <Arrow
-      class="stroke-primary-foreground"
-      rotate={-45}
-    /></a
-  >
+    >Site template by Kadir Lofca 
+  <Arrow class="stroke-primary-foreground" rotate={-45} /></a>
   <div
     class="group rounded-interactive border-primary-foreground text-primary-foreground w-24 border p-1 text-xs font-black text-nowrap opacity-60"
   >

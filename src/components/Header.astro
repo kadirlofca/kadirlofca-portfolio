@@ -36,11 +36,10 @@ const { cosmeticText = "" } = Astro.props;
   <Menu client:load />
 
   <!-- USER CONTACT -->
-  <div class="ml-auto hidden flex-col gap-4 sm:gap-0 md:block md:flex">
+  <div class="ml-auto hidden flex-col gap-4 sm:gap-0 md:flex">
     <a
       class="ml-auto duration-200 hover:brightness-125"
-      href={`mailto:${userContactData.userEmail}`}>{userContactData.userEmail}<Arrow rotate={-45} /></a
-    >
+      href={`mailto:${userContactData.userEmail}`}>{userContactData.userEmail}<Arrow class="stroke-primary-foreground" rotate={-45} /></a>
     <div class="flex flex-row-reverse flex-wrap gap-4">
       {
         userContactData.userSocials.map((social) => (
