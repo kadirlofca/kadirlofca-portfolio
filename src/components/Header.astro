@@ -18,14 +18,6 @@ const { cosmeticText = "" } = Astro.props;
   <div class="mt-auto">
     <CosmeticText text={cosmeticText} vertical />
   </div>
-
-  <span class="mt-auto">
-    <CosmeticText
-      text={new Date()
-        .toLocaleDateString("en-us", { year: "numeric", month: "short" })
-        .toUpperCase()}
-    />
-  </span>
 </Section>
 
 <Section class="flex flex-row p-2">
