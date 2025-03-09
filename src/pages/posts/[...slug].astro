@@ -23,7 +23,11 @@ const { Content } = await render(post);
   siteDescription={Astro.props.data.description}
   headerCosmeticText="POST"
 >
-  <Section class="prose-lg p-8">
+  <Section class="py-4" />
+
+  <Section class="prose-lg p-4 bg-radial-[at_100%_100%] from-accent/10 to-transparent">
+    <h2>{Astro.props.data.title}</h2>
+    <p>{Astro.props.data.description}</p>
     <Content />
   </Section>
 </Layout>

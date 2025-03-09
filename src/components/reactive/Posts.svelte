@@ -2,6 +2,7 @@
     import { type CollectionEntry } from 'astro:content';
     import { filters } from '../../stores/filters.store';
     import Filters from './Filters.svelte';
+    import { cn } from '../../styles/cn';
 
     interface Props {
         allPosts: CollectionEntry<'posts'>[];
@@ -43,18 +44,11 @@
 
 {#snippet postCard(post: CollectionEntry<'posts'>)}
     <a href={`/posts/${post.id}`} class="flex flex-col justify-between gap-2 min-h-32 h-full p-2 border rounded-interactive border-edge bg-linear-to-b from-secondary to-secondary/60 pointer-events-auto hover:border-accent duration-200">
-        <div>
-            <span class="text-sm text-primary-foreground/75">
-                <time datetime={post.data.date.toISOString()}>
-                    {post.data.date.toLocaleDateString('en-us', {year: 'numeric', month: 'short', day: 'numeric'})}
-                </time>
-            </span>
-            <h2 class="text-lg font-semibold">{post.data.title}</h2>
-            <p>{post.data.description}</p>
-        </div>
-        <div class="flex flex-row gap-2 text-accent">
+        <h2 class="text-lg font-semibold">{post.data.title}</h2>
+        <p>{post.data.description}</p>
+        <div class="flex flex-row gap-2 text-transparent overflow-hidden bg-linear-to-r from-accent to-transparent from-92% bg-clip-text border-r border-edge">
             {#each getSortedTags(post) as tag}
-                <span class={($filters.length > 0 && !$filters.includes(tag)) ? "opacity-60" : ""}>{tag}</span>
+                <span class={cn(($filters.length > 0 && !$filters.includes(tag)) ? "opacity-60" : "", "text-nowrap")}>{tag}</span>
             {/each}
         </div>
     </a>
