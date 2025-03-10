@@ -21,7 +21,7 @@ The foundation of the project was built in the **Unity** game engine. I used **C
 
 One of the most important requirements of this experience was mitigating motion sickness - the sick feeling caused by motion seen through VR not matching your senses. This required a ton of manual testing by putting the VR headset on and walking through the house. I had to tweak the movement speed, rotation speed, teleportation animation, and even the visuals of the environment to help reduce motion sickness. The result was a success!
 
-## Modeling and Optimization in Blender
+## Optimizations
 
 Apart from our mentors, my only colleague in this project was an interior design student, who took measurements of the house and analyzed blueprints to create an accurate 3D model of it, and handed the model to me. However, the usual requirements of an interior designers 3D models and a VR application are drastically different, and so, I would have to optimize the project by 50% to reach the 90FPS target.
 
@@ -29,14 +29,6 @@ I started by using Unity's profiling tool to see what was causing low frames. I 
 
 After doing some testing and trying to understand the cause of low frames, I found out something about Unity. I assumed Unity had culling tools enabled by default, and I was wrong. Almost all triangles from the 3D model was being rendered every single frame - even ones that the user shouldn't be able to see!! I quickly implemented frustum culling to hide away triangles that the user couldn't see, and the frames reached our target 😁
 
-## Performance Optimization: Culling and More
-
-To further enhance performance and ensure a smooth VR experience, I implemented a series of **culling** methods. Culling is the process of determining which objects in a scene are visible to the player at any given time and which are not. By only rendering objects that are within the player’s view or near their position, I significantly reduced the computational load on the system.
-
-In Unity, I made use of the **frustum culling** feature, which automatically removes objects that are outside of the camera’s field of view. Additionally, I used **occlusion culling**, which allows Unity to not render objects that are blocked by other objects in the scene. This combination of culling methods greatly increased the performance of the project, ensuring that the VR experience ran smoothly without sacrificing visual quality.
-
-Lastly, I implemented **baking** for lighting and shadows in Unity, reducing the need for real-time calculations during the VR experience. By precomputing lighting data, I reduced the strain on the system, which helped maintain a higher frame rate for a more comfortable VR experience.
-
 ## Conclusion
 
-Through a combination of careful modeling in **Blender**, efficient scripting in **C#** using **Unity**, and optimization techniques like culling and model reduction, I was able to create a historically accurate and high-performance VR experience for the **Magnolia House project**. It was a challenging but rewarding experience, as I had to balance technical constraints with the need to honor the historical significance of the site. The result is a virtual environment that transports users to a critical moment in American history, all while ensuring a smooth and immersive VR experience.
+Through a combination of careful optimization and efficient scripting in **C#** using **Unity**, I was able to create a historically accurate and high-performance VR experience for the **Magnolia House project -** in under 3 months. It was a challenging but rewarding experience, as I had to balance technical constraints with the need to reduce motion sickness. The result is a virtual environment that transports users to a critical moment in American history, all while ensuring a smooth and immersive VR experience.
