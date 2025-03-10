@@ -11,11 +11,11 @@ tags:
   - Spacial Audio
 date: 2025-03-09
 ---
-I had the opportunity to bring the rich history of the Magnolia House to life using **C#**, **Unity**, and **Blender**. My goal was to create an immersive virtual reality experience that would allow users to explore this historic house and learn about it's history through audio-visual elements.
+I had the opportunity to bring the rich history of the Magnolia House to life using **C#**, **Unity**, and **Blender**. My goal was to create an immersive virtual reality experience that would allow users to explore this historic house and learn about it's history through virtual reality.
 
-## Development Process: Unity and C#
+## Development Process
 
-The foundation of the project was built in **Unity**, a powerful game engine that provided me with all the tools I needed to create an interactive VR environment. I used **C#** to script and control the mechanics of the experience, handling everything from player interactions to triggering events as the user navigates through the virtual space.
+I created this project using the **Unity** game engine. I worked with another
 
 One of the most important aspects of the development was ensuring that the experience was smooth and responsive in virtual reality. Unity’s integration with C# allowed me to create custom scripts to handle movement, object interactions, and environmental storytelling. I also utilized Unity’s **XR Toolkit** to ensure compatibility across various VR devices, making the experience accessible to a wider audience.
 
