@@ -1,6 +1,6 @@
 ---
 published: true
-title: Word Maker
+title: Word Maker 🔠 🆒
 description: jhfg
 tags:
   - yuifty
