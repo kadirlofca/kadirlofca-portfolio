@@ -1,6 +1,6 @@
 ---
 published: true
-title: VR Two-Factor Authentication
+title: VR Two-Factor Authentication 🔒 🔑
 description: jhg
 tags:
   - hgf
