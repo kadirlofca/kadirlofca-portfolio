@@ -15,11 +15,11 @@ I had the opportunity to bring the history of the Magnolia House to life in virt
 
 As the only developer behind this project, I had to fill multiple roles. I used **C#** and **Unity**, for the programming part of the project, and **Blender, Affinity Designer, SketchUp, Audacity** for other parts. My goal as the developer was to create an immersive experience that would allow users to feel the significance of this historic house. Aside from technical skill, this project required strong communication skills to set project requirements, deadlines, and expectations with the client.
 
-## Development Process: Unity and C#
+## Development Process
 
-The foundation of the project was built in **Unity**, a powerful game engine that provided me with all the tools I needed to create an interactive VR environment. I used **C#** to script and control the mechanics of the experience, handling everything from player interactions to triggering events as the user navigates through the virtual space.
+The foundation of the project was built in the **Unity** game engine. I used **C#** to script the mechanics of the experience - everything from player movement and interactions to logic behind the spacial audio and visuals.
 
-One of the most important aspects of the development was ensuring that the experience was smooth and responsive in virtual reality. Unity’s integration with C# allowed me to create custom scripts to handle movement, object interactions, and environmental storytelling. I also utilized Unity’s **XR Toolkit** to ensure compatibility across various VR devices, making the experience accessible to a wider audience.
+One of the most important requirements of this experience was mitigating motion sickness - the sick feeling caused by motion seen through VR not matching your senses. This required a ton of manual testing by putting the VR headset on and walking through the house. I had to tweak the movement speed, rotation speed, teleportation animation, and even the visuals of the environment to help reduce motion sickness. The result was a success!
 
 ## Modeling and Optimization in Blender
 
