@@ -23,7 +23,11 @@ One of the most important requirements of this experience was mitigating motion 
 
 ## Modeling and Optimization in Blender
 
-Apart from our mentors, my only colleague in this project was an interior design student, who took measurements of the house and analyzed blueprints to create an accurate 3D model of it, and handed the model to me. However, the usual requirements of an interior designers 3D models and a VR application are drastically different, and so, I had to optimize the project by 50% to reach the 90FPS target.
+Apart from our mentors, my only colleague in this project was an interior design student, who took measurements of the house and analyzed blueprints to create an accurate 3D model of it, and handed the model to me. However, the usual requirements of an interior designers 3D models and a VR application are drastically different, and so, I would have to optimize the project by 50% to reach the 90FPS target.
+
+I started by using Unity's profiling tool to see what was causing low frames. I noticed the amount of triangles being rendered was above a few million!!! When I first saw this, I thought the model was just unoptimized for VR hardware, so I went into **Blender** and started removing unnecessary triangles - ones that are redundant and ones that the user would never see. After my changes to the model, I used the profiling tool again and although there was an improvement, there was still a long way to go...
+
+After doing some testing and trying to understand the cause of low frames, I found out something about Unity. I assumed Unity had culling tools enabled by default, and I was wrong. Almost all triangles from the 3D model was being rendered every single frame - even ones that the user shouldn't be able to see!! I quickly implemented frustum culling to hide away triangles that the user couldn't see, and the frames reached our target
 
 To build the 3D models of the Magnolia House and its surrounding environment, I turned to **Blender**, a powerful open-source 3D modeling tool. The process involved creating detailed, accurate representations of the house, the furniture, and other artifacts from the era. Since this was a historical project, attention to detail was critical to capturing the essence of the space.
 
