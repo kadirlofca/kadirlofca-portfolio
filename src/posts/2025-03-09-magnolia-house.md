@@ -1,6 +1,6 @@
 ---
 published: true
-title: Magnolia House
+title: "Magnolia House 🚶‍♀️‍➡️ 🏡 "
 description: The official virtual reality tour of the Historic Magnolia House on
   the Meta Quest 2.
 tags:
