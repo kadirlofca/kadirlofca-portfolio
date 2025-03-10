@@ -1,6 +1,6 @@
 ---
 published: true
-title: Quick Character
+title: Quick Character 🏃 🏂
 description: adasd
 tags:
   - C#
