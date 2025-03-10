@@ -19,7 +19,7 @@
 
 {#snippet tag(title: string)}
     {#if isMounted}
-        <button onclick={() => toggleFilter(title)} in:fade={{duration: 200 + Math.random() * 400, delay: Math.random() * 600}} class={cn($filters.includes(title) ? "opacity-65" : "", "inline-block w-fit h-fit px-2 py-1 bg-transparent border rounded-interactive border-accent text-accent font-semibold hover:bg-accent hover:text-primary hover:cursor-pointer duration-200")}>
+        <button onclick={() => toggleFilter(title)} in:fade={{duration: 300 + Math.random() * 1000, delay: Math.random() * 1500}} class={cn($filters.includes(title) ? "opacity-65" : "", "inline-block w-fit h-fit px-2 py-1 bg-transparent border rounded-interactive border-accent text-accent font-semibold hover:bg-accent hover:text-primary hover:cursor-pointer duration-200")}>
             {title}
         </button>
     {/if}

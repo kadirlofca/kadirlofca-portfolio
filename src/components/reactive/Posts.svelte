@@ -32,13 +32,11 @@
     function compareTags(a: string, b: string): number {
         const includesA: boolean = $filters.includes(a);
         const includesB: boolean = $filters.includes(b);
-        return includesA && includesB ? 0 : includesA ? -1 : 1; 
+        return includesA && includesB ? 0 : includesA ? -1 : includesB ? 1 : -1; 
     }
 
     function getSortedTags(post: CollectionEntry<'posts'>): string[] {
-        const sortedTags: string[] = [...post.data.tags];
-        sortedTags.sort((a, b) => compareTags(a, b));
-        return sortedTags;
+        return [...post.data.tags].sort((a, b) => compareTags(a, b));
     }
 </script>
 
