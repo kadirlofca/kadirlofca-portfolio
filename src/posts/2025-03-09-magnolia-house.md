@@ -1,7 +1,8 @@
 ---
 published: true
 title: Magnolia House
-description: A virtual reality tour of the Historic Magnolia House for the Meta Quest 2.
+description: The official virtual reality tour of the Historic Magnolia House on
+  the Meta Quest 2.
 tags:
   - C#
   - Unity
