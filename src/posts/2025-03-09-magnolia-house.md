@@ -13,7 +13,7 @@ date: 2025-03-09
 ---
 I had the opportunity to bring the history of the Magnolia House to life in virtual reality. The goal of this project was to showcase the rooms where famous visitors of the Magnolia House stayed in.
 
-As the developer behind this project, **C#**, **Unity**, and **Blender**. My goal was to create an immersive virtual reality experience that would allow users to explore this historic landmark and its significance to African American travelers during the segregation era. The project required both technical skill and a deep respect for the history I was helping to preserve.
+As the only developer behind this project, I had to fill multiple roles. I used **C#** and **Unity**, for the programming part of the project, and **Blender, Affinity Designer, SketchUp, Audacity** for other parts. My goal as the developer was to create an immersive experience that would allow users to feel the significance of this historic house. Aside from technical skill, this project required strong communication skills to set project requirements, deadlines, and expectations with the client.
 
 ## Development Process: Unity and C#
 
