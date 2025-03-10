@@ -23,6 +23,8 @@ One of the most important requirements of this experience was mitigating motion 
 
 ## Modeling and Optimization in Blender
 
+Apart from our mentors, my only colleague in this project was an interior design student, who took measurements of the house and analyzed blueprints to create an accurate 3D model of the house, and handed the model to me. I handled the rest of the development.
+
 To build the 3D models of the Magnolia House and its surrounding environment, I turned to **Blender**, a powerful open-source 3D modeling tool. The process involved creating detailed, accurate representations of the house, the furniture, and other artifacts from the era. Since this was a historical project, attention to detail was critical to capturing the essence of the space.
 
 Once the models were created, I encountered the challenge of optimizing the 3D assets to ensure the best performance in VR. Detailed models with high polygon counts can easily slow down performance, especially when rendering in real-time VR environments. To address this, I used **decimation techniques** in Blender to reduce the polygon count while maintaining as much visual fidelity as possible. I also used **LOD (Level of Detail) techniques** in Unity, where models with fewer polygons would be used when viewed from a distance.
