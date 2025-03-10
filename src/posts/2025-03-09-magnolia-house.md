@@ -11,9 +11,7 @@ tags:
   - Spacial Audio
 date: 2025-03-09
 ---
-# Creating the Magnolia House VR Project: A Developer’s Journey
-
-As the developer behind the **Magnolia House VR project**, I had the opportunity to bring the rich history of the Magnolia House to life using **C#**, **Unity**, and **Blender**. My goal was to create an immersive virtual reality experience that would allow users to explore this historic landmark and its significance to African American travelers during the segregation era. The project required both technical skill and a deep respect for the history I was helping to preserve.
+I had the opportunity to bring the rich history of the Magnolia House to life using **C#**, **Unity**, and **Blender**. My goal was to create an immersive virtual reality experience that would allow users to explore this historic house and learn about it's history through audio-visual elements.
 
 ## Development Process: Unity and C#
 
